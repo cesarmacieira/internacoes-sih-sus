@@ -89,6 +89,17 @@ dados_empilhados_AL = load_data(arquivos = arquivos_AL,
                                 caminho_pasta = caminho_pasta_AL)
 arrow::write_parquet(dados_empilhados_AL %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AL/dados_empilhados_AL.parquet")
 
+caminho_pasta_AM = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AM"
+arquivos_AM = list.files(path = caminho_pasta_AM, pattern = "*.dbc", full.names = TRUE)
+dados_empilhados_AM = load_data(arquivos = arquivos_AM, 
+                                caminho_pasta = caminho_pasta_AM)
+arrow::write_parquet(dados_empilhados_AM %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AM/dados_empilhados_AM.parquet")
+
+caminho_pasta_AP = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AP"
+arquivos_AP = list.files(path = caminho_pasta_AP, pattern = "*.dbc", full.names = TRUE)
+dados_empilhados_AP = load_data(arquivos = arquivos_AP, 
+                                caminho_pasta = caminho_pasta_AP)
+arrow::write_parquet(dados_empilhados_AP %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AP/dados_empilhados_AP.parquet")
 
 #######################################3
 
