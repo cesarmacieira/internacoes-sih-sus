@@ -64,32 +64,30 @@ basic.stats = function(x, more = F) {
 ####=============================
 #### Carregando o banco de dados 
 ####=============================
-load_data = function(arquivos, caminho_pasta_dbc, caminho_pasta_parquet) {
+load_data = function(arquivos, caminho_pasta) {
   lista_dfs = list()
   for (arquivo in arquivos) {
     df = read.dbc(arquivo) %>% select(ANO_CMPT,MES_CMPT,MUNIC_RES,SEXO,DIAG_PRINC,COD_IDADE,IDADE)
     lista_dfs = append(lista_dfs, list(df))
     nome_arquivo = gsub(".dbc", ".parquet", basename(arquivo))
-    caminho_parquet = file.path(caminho_pasta_parquet, nome_arquivo)
-    arrow::write_parquet(df %>% as.data.frame(), caminho_parquet)
+    caminho_arquivo = file.path(caminho_pasta, nome_arquivo)
+    arrow::write_parquet(df %>% as.data.frame(), caminho_arquivo)
   }
   df_final = bind_rows(lista_dfs)
   return(df_final)
 }
 
-caminho_pasta_dbc = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos dbc"
-caminho_pasta_parquet = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos parquet"
-arquivos_dbc = list.files(path = caminho_pasta_dbc, pattern = "*.dbc", full.names = TRUE)
-dados_empilhados_AC = load_data(arquivos_dbc, 
-                                caminho_pasta_dbc = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos dbc",
-                                caminho_pasta_parquet = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos parquet")
+caminho_pasta_AC = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC"
+arquivos_AC = list.files(path = caminho_pasta_AC, pattern = "*.dbc", full.names = TRUE)
+dados_empilhados_AC = load_data(arquivos = arquivos_AC, 
+                                caminho_pasta = caminho_pasta_AC)
+arrow::write_parquet(dados_empilhados_AC %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/dados_empilhados_AC.parquet")
 
-caminho_pasta_dbc = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos dbc"
-caminho_pasta_parquet = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos parquet"
-arquivos_dbc = list.files(path = caminho_pasta_dbc, pattern = "*.dbc", full.names = TRUE)
-dados_empilhados_AC = load_data(arquivos_dbc, 
-                                caminho_pasta_dbc = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos dbc",
-                                caminho_pasta_parquet = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/Arquivos parquet")
+caminho_pasta_AL = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AL"
+arquivos_AL = list.files(path = caminho_pasta_AL, pattern = "*.dbc", full.names = TRUE)
+dados_empilhados_AL = load_data(arquivos = arquivos_AL, 
+                                caminho_pasta = caminho_pasta_AL)
+arrow::write_parquet(dados_empilhados_AL %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AL/dados_empilhados_AL.parquet")
 
 
 #######################################3
