@@ -187,4 +187,4 @@ dados_Pneumonia = rbind(dados_AC_Pneumonia,dados_AL_Pneumonia,dados_AM_Pneumonia
                         dados_PI_Pneumonia,dados_PR_Pneumonia,dados_RJ_Pneumonia,dados_RN_Pneumonia,
                         dados_RO_Pneumonia,dados_RR_Pneumonia,dados_RS_Pneumonia,dados_SC,
                         dados_SE_Pneumonia,dados_SP_Pneumonia,dados_TO)
-arrow::write_parquet(dados_Pneumonia %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/dados_Pneumonia.parquet")
+arrow::write_parquet(dados_Pneumonia %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Pneumonia/dados_Pneumonia.parquet")
