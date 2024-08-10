@@ -214,7 +214,8 @@ arrow::write_parquet(dados_empilhados_SE %>% as.data.frame(), "D:/NESCON/Bancos 
 caminho_pasta_SP = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/SP"
 arquivos_SP = list.files(path = caminho_pasta_SP, pattern = "*.dbc", full.names = TRUE)
 dados_empilhados_SP = DadosDBCemParquet(arquivos = arquivos_SP, caminho_pasta = caminho_pasta_SP)
-arrow::write_parquet(dados_empilhados_SP %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/SP/dados_empilhados_SP.parquet")
+arrow::write_parquet(dados_empilhados_SP[1:17819708,] %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/SP/dados_empilhados_SP1.parquet")
+arrow::write_parquet(dados_empilhados_SP[17819709:35639416,] %>% as.data.frame(), "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/SP/dados_empilhados_SP2.parquet")
 
 caminho_pasta_TO = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/TO"
 arquivos_TO = list.files(path = caminho_pasta_TO, pattern = "*.dbc", full.names = TRUE)
