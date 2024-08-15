@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+Dados por CID/Anemia/dados_Anemia.parquet
+Dados por CID/Pneumonias/dados_Pneumonias.parquet
