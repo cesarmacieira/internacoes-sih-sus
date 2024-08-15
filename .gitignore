@@ -3,4 +3,22 @@
 .RData
 .Ruserdata
 Dados por CID/Anemia/dados_Anemia.parquet
+Dados por CID/Angina/dados_Angina.parquet
+Dados por CID/Asma/dados_Asma.parquet
+Dados por CID/Deficiências nutricionais/dados_Deficiências_nutricionais.parquet
+Dados por CID/Diabetes/dados_Diabetes.parquet
+Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_Doença_Inflamatória_órgãos_pélvicos_femininos.parquet
+Dados por CID/Doença Pulmonar obstrutiva crônica/dados_Doença_Pulmonar_obstrutiva_crônica.parquet
+Dados por CID/Doenças Cerebro-vasculares/dados_Doenças_Cerebrovasculares.parquet
+Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_Doenças_preveníveis_por_imunização_e_condições_evitáveis.parquet
+Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_Doenças_relacionadas_ao_PréNatal_e_Parto.parquet
+Dados por CID/Epilepsias/dados_Epilepsias.parquet
+Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastroenterites_Infecciosas_e_complicações.parquet
+Dados por CID/Hipertensão/dados_Hipertensão.parquet
+Dados por CID/Infecção da pele e tecido subcutâneo/dados_Infecção_da_pele_e_tecido_subcutâneo.parquet
+Dados por CID/Infecção no Rim e no Trato Urinário/dados_Infecção_no_Rim_e_no_Trato_Urinário.parquet
+Dados por CID/Infecções de ouvido, nariz e garganta/dados_Infecções_de_ouvido_nariz_e_garganta.parquet
+Dados por CID/Insuficiência Cardíaca/dados_Insuficiência_Cardíaca.parquet
+Dados por CID/Neoplasia maligna do útero/dados_Neoplasia_maligna_do_útero.parquet
 Dados por CID/Pneumonias/dados_Pneumonias.parquet
+Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Úlcera_gastrointestinal_com_hemorragia_eou_perfuração.parquet
