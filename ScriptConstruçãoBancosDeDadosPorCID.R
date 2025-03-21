@@ -453,44 +453,26 @@ dados_SC_D_Inf_Org_Pelv_Fem = FiltraDadosCID(dados_SC, c("N70","N71","N72","N73"
 dados_SE_D_Inf_Org_Pelv_Fem = FiltraDadosCID(dados_SE, c("N70","N71","N72","N73","N75","N76"))
 dados_SP_D_Inf_Org_Pelv_Fem = FiltraDadosCID(dados_SP, c("N70","N71","N72","N73","N75","N76"))
 dados_TO_D_Inf_Org_Pelv_Fem = FiltraDadosCID(dados_TO, c("N70","N71","N72","N73","N75","N76"))
-
-arrow::write_parquet(dados_AC_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_AC_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_AL_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_AL_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_AM_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_AM_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_AP_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_AP_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_BA_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_BA_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_CE_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_CE_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_DF_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_DF_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_ES_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_ES_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_GO_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_GO_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_MA_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_MA_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_MG_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_MG_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_MS_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_MS_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_MT_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_MT_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_PA_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_PA_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_PB_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_PB_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_PE_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_PE_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_PI_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_PI_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_PR_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_PR_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_RJ_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_RJ_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_RN_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_RN_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_RO_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_RO_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_RR_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_RR_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_RS_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_RS_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_SC_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_SC_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_SE_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_SE_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_SP_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_SP_D_Inf_Org_Pelv_Fem.parquet')
-arrow::write_parquet(dados_TO_D_Inf_Org_Pelv_Fem %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_TO_D_Inf_Org_Pelv_Fem.parquet')
-
-dados_D_Inf_Org_Pelv_Fem = 
-  rbind(dados_AC_D_Inf_Org_Pelv_Fem,dados_AL_D_Inf_Org_Pelv_Fem,dados_AM_D_Inf_Org_Pelv_Fem,dados_AP_D_Inf_Org_Pelv_Fem,
-        dados_BA_D_Inf_Org_Pelv_Fem,dados_CE_D_Inf_Org_Pelv_Fem,dados_DF_D_Inf_Org_Pelv_Fem,dados_ES_D_Inf_Org_Pelv_Fem,
-        dados_GO_D_Inf_Org_Pelv_Fem,dados_MA_D_Inf_Org_Pelv_Fem,dados_MG_D_Inf_Org_Pelv_Fem,dados_MS_D_Inf_Org_Pelv_Fem,
-        dados_MT_D_Inf_Org_Pelv_Fem,dados_PA_D_Inf_Org_Pelv_Fem,dados_PB_D_Inf_Org_Pelv_Fem,dados_PE_D_Inf_Org_Pelv_Fem,
-        dados_PI_D_Inf_Org_Pelv_Fem,dados_PR_D_Inf_Org_Pelv_Fem,dados_RJ_D_Inf_Org_Pelv_Fem,dados_RN_D_Inf_Org_Pelv_Fem,
-        dados_RO_D_Inf_Org_Pelv_Fem,dados_RR_D_Inf_Org_Pelv_Fem,dados_RS_D_Inf_Org_Pelv_Fem,dados_SC_D_Inf_Org_Pelv_Fem,
-        dados_SE_D_Inf_Org_Pelv_Fem,dados_SP_D_Inf_Org_Pelv_Fem,dados_TO_D_Inf_Org_Pelv_Fem)
-arrow::write_parquet(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_Doença_Inflamatória_órgãos_pélvicos_femininos.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_Inf_Org_Pelv_Fem")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_", uf, "_D_Inf_Org_Pelv_Fem.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_Inf_Org_Pelv_Fem")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_", uf, "_D_Inf_Org_Pelv_Fem.parquet")) })
+}
+dados_D_Inf_Org_Pelv_Fem = rbind(dados_AC_D_Inf_Org_Pelv_Fem,dados_AL_D_Inf_Org_Pelv_Fem,dados_AM_D_Inf_Org_Pelv_Fem,dados_AP_D_Inf_Org_Pelv_Fem,
+                              dados_BA_D_Inf_Org_Pelv_Fem,dados_CE_D_Inf_Org_Pelv_Fem,dados_DF_D_Inf_Org_Pelv_Fem,dados_ES_D_Inf_Org_Pelv_Fem,
+                              dados_GO_D_Inf_Org_Pelv_Fem,dados_MA_D_Inf_Org_Pelv_Fem,dados_MG_D_Inf_Org_Pelv_Fem,dados_MS_D_Inf_Org_Pelv_Fem,
+                              dados_MT_D_Inf_Org_Pelv_Fem,dados_PA_D_Inf_Org_Pelv_Fem,dados_PB_D_Inf_Org_Pelv_Fem,dados_PE_D_Inf_Org_Pelv_Fem,
+                              dados_PI_D_Inf_Org_Pelv_Fem,dados_PR_D_Inf_Org_Pelv_Fem,dados_RJ_D_Inf_Org_Pelv_Fem,dados_RN_D_Inf_Org_Pelv_Fem,
+                              dados_RO_D_Inf_Org_Pelv_Fem,dados_RR_D_Inf_Org_Pelv_Fem,dados_RS_D_Inf_Org_Pelv_Fem,dados_SC_D_Inf_Org_Pelv_Fem,
+                              dados_SE_D_Inf_Org_Pelv_Fem,dados_SP_D_Inf_Org_Pelv_Fem,dados_TO_D_Inf_Org_Pelv_Fem)
+tryCatch({arrow::write_parquet(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.parquet') })
+tryCatch({write.xlsx(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx") })
 
 ####====================================
 #### Doença Pulmonar obstrutiva crônica
@@ -522,44 +504,26 @@ dados_SC_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SC, c("J20","J21","J40","J41","J
 dados_SE_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
 dados_SP_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SP, c("J20","J21","J40","J41","J42","J43","J44","J47"))
 dados_TO_D_Pulm_Obs_Cron = FiltraDadosCID(dados_TO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-
-arrow::write_parquet(dados_AC_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_AC_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_AL_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_AL_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_AM_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_AM_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_AP_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_AP_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_BA_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_BA_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_CE_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_CE_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_DF_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_DF_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_ES_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_ES_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_GO_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_GO_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_MA_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_MA_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_MG_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_MG_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_MS_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_MS_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_MT_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_MT_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_PA_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_PA_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_PB_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_PB_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_PE_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_PE_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_PI_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_PI_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_PR_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_PR_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_RJ_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_RJ_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_RN_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_RN_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_RO_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_RO_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_RR_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_RR_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_RS_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_RS_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_SC_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_SC_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_SE_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_SE_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_SP_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_SP_D_Pulm_Obs_Cron.parquet')
-arrow::write_parquet(dados_TO_D_Pulm_Obs_Cron %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_TO_D_Pulm_Obs_Cron.parquet')
-
-dados_D_Pulm_Obs_Cron = 
-  rbind(dados_AC_D_Pulm_Obs_Cron,dados_AL_D_Pulm_Obs_Cron,dados_AM_D_Pulm_Obs_Cron,dados_AP_D_Pulm_Obs_Cron,
-        dados_BA_D_Pulm_Obs_Cron,dados_CE_D_Pulm_Obs_Cron,dados_DF_D_Pulm_Obs_Cron,dados_ES_D_Pulm_Obs_Cron,
-        dados_GO_D_Pulm_Obs_Cron,dados_MA_D_Pulm_Obs_Cron,dados_MG_D_Pulm_Obs_Cron,dados_MS_D_Pulm_Obs_Cron,
-        dados_MT_D_Pulm_Obs_Cron,dados_PA_D_Pulm_Obs_Cron,dados_PB_D_Pulm_Obs_Cron,dados_PE_D_Pulm_Obs_Cron,
-        dados_PI_D_Pulm_Obs_Cron,dados_PR_D_Pulm_Obs_Cron,dados_RJ_D_Pulm_Obs_Cron,dados_RN_D_Pulm_Obs_Cron,
-        dados_RO_D_Pulm_Obs_Cron,dados_RR_D_Pulm_Obs_Cron,dados_RS_D_Pulm_Obs_Cron,dados_SC_D_Pulm_Obs_Cron,
-        dados_SE_D_Pulm_Obs_Cron,dados_SP_D_Pulm_Obs_Cron,dados_TO_D_Pulm_Obs_Cron)
-arrow::write_parquet(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_Doença_Pulmonar_obstrutiva_crônica.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_Pulm_Obs_Cron")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_", uf, "_D_Pulm_Obs_Cron.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_Pulm_Obs_Cron")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_", uf, "_D_Pulm_Obs_Cron.parquet")) })
+}
+dados_D_Pulm_Obs_Cron = rbind(dados_AC_D_Pulm_Obs_Cron,dados_AL_D_Pulm_Obs_Cron,dados_AM_D_Pulm_Obs_Cron,dados_AP_D_Pulm_Obs_Cron,
+                            dados_BA_D_Pulm_Obs_Cron,dados_CE_D_Pulm_Obs_Cron,dados_DF_D_Pulm_Obs_Cron,dados_ES_D_Pulm_Obs_Cron,
+                            dados_GO_D_Pulm_Obs_Cron,dados_MA_D_Pulm_Obs_Cron,dados_MG_D_Pulm_Obs_Cron,dados_MS_D_Pulm_Obs_Cron,
+                            dados_MT_D_Pulm_Obs_Cron,dados_PA_D_Pulm_Obs_Cron,dados_PB_D_Pulm_Obs_Cron,dados_PE_D_Pulm_Obs_Cron,
+                            dados_PI_D_Pulm_Obs_Cron,dados_PR_D_Pulm_Obs_Cron,dados_RJ_D_Pulm_Obs_Cron,dados_RN_D_Pulm_Obs_Cron,
+                            dados_RO_D_Pulm_Obs_Cron,dados_RR_D_Pulm_Obs_Cron,dados_RS_D_Pulm_Obs_Cron,dados_SC_D_Pulm_Obs_Cron,
+                            dados_SE_D_Pulm_Obs_Cron,dados_SP_D_Pulm_Obs_Cron,dados_TO_D_Pulm_Obs_Cron)
+tryCatch({arrow::write_parquet(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Pulm_Obs_Cron %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.parquet') })
+tryCatch({write.xlsx(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx") })
 
 ####============================
 #### Doenças Cerebro-vasculares
@@ -591,43 +555,26 @@ dados_SC_D_Cerebrovasc = FiltraDadosCID(dados_SC, c("I60","I61","I62","I63","I64
 dados_SE_D_Cerebrovasc = FiltraDadosCID(dados_SE, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
 dados_SP_D_Cerebrovasc = FiltraDadosCID(dados_SP, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
 dados_TO_D_Cerebrovasc = FiltraDadosCID(dados_TO, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-
-arrow::write_parquet(dados_AC_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_AC_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_AL_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_AL_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_AM_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_AM_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_AP_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_AP_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_BA_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_BA_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_CE_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_CE_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_DF_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_DF_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_ES_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_ES_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_GO_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_GO_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_MA_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_MA_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_MG_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_MG_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_MS_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_MS_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_MT_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_MT_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_PA_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_PA_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_PB_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_PB_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_PE_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_PE_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_PI_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_PI_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_PR_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_PR_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_RJ_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_RJ_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_RN_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_RN_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_RO_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_RO_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_RR_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_RR_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_RS_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_RS_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_SC_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_SC_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_SE_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_SE_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_SP_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_SP_D_Cerebrovasc.parquet')
-arrow::write_parquet(dados_TO_D_Cerebrovasc %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_TO_D_Cerebrovasc.parquet')
-
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_Cerebrovasc")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_", uf, "_D_Cerebrovasc.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_Cerebrovasc")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_", uf, "_D_Cerebrovasc.parquet")) })
+}
 dados_D_Cerebrovasc = rbind(dados_AC_D_Cerebrovasc,dados_AL_D_Cerebrovasc,dados_AM_D_Cerebrovasc,dados_AP_D_Cerebrovasc,
-                            dados_BA_D_Cerebrovasc,dados_CE_D_Cerebrovasc,dados_DF_D_Cerebrovasc,dados_ES_D_Cerebrovasc,
-                            dados_GO_D_Cerebrovasc,dados_MA_D_Cerebrovasc,dados_MG_D_Cerebrovasc,dados_MS_D_Cerebrovasc,
-                            dados_MT_D_Cerebrovasc,dados_PA_D_Cerebrovasc,dados_PB_D_Cerebrovasc,dados_PE_D_Cerebrovasc,
-                            dados_PI_D_Cerebrovasc,dados_PR_D_Cerebrovasc,dados_RJ_D_Cerebrovasc,dados_RN_D_Cerebrovasc,
-                            dados_RO_D_Cerebrovasc,dados_RR_D_Cerebrovasc,dados_RS_D_Cerebrovasc,dados_SC_D_Cerebrovasc,
-                            dados_SE_D_Cerebrovasc,dados_SP_D_Cerebrovasc,dados_TO_D_Cerebrovasc)
-arrow::write_parquet(dados_D_Cerebrovasc %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_Doenças_Cerebrovasculares.parquet")
+                                dados_BA_D_Cerebrovasc,dados_CE_D_Cerebrovasc,dados_DF_D_Cerebrovasc,dados_ES_D_Cerebrovasc,
+                                dados_GO_D_Cerebrovasc,dados_MA_D_Cerebrovasc,dados_MG_D_Cerebrovasc,dados_MS_D_Cerebrovasc,
+                                dados_MT_D_Cerebrovasc,dados_PA_D_Cerebrovasc,dados_PB_D_Cerebrovasc,dados_PE_D_Cerebrovasc,
+                                dados_PI_D_Cerebrovasc,dados_PR_D_Cerebrovasc,dados_RJ_D_Cerebrovasc,dados_RN_D_Cerebrovasc,
+                                dados_RO_D_Cerebrovasc,dados_RR_D_Cerebrovasc,dados_RS_D_Cerebrovasc,dados_SC_D_Cerebrovasc,
+                                dados_SE_D_Cerebrovasc,dados_SP_D_Cerebrovasc,dados_TO_D_Cerebrovasc)
+tryCatch({arrow::write_parquet(dados_D_Cerebrovasc %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Cerebrovasc %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.parquet') })
+tryCatch({write.xlsx(dados_D_Cerebrovasc %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Cerebrovasc %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx") })
 
 ####==========================================================
 #### Doenças preveníveis por imunização e condições evitáveis
