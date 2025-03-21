@@ -190,9 +190,9 @@ for (uf in estados) {
   tryCatch({arrow::write_parquet(
     get(paste0("dados_", uf, "_Anemia")) %>% as.data.frame(),
     paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Anemia/dados_", uf, "_Anemia.parquet"))},
-           error = function(e) { arrow::write_parquet(
-    get(paste0("dados_", uf, "_Anemia")) %>% as.data.frame(),
-    paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Anemia/dados_", uf, "_Anemia.parquet")) })
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Anemia")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Anemia/dados_", uf, "_Anemia.parquet")) })
 }
 
 dados_Anemia = rbind(dados_AC_Anemia,dados_AL_Anemia,dados_AM_Anemia,dados_AP_Anemia,
@@ -304,12 +304,12 @@ for (uf in estados) {
 }
 
 dados_Asma = rbind(dados_AC_Asma,dados_AL_Asma,dados_AM_Asma,dados_AP_Asma,
-                     dados_BA_Asma,dados_CE_Asma,dados_DF_Asma,dados_ES_Asma,
-                     dados_GO_Asma,dados_MA_Asma,dados_MG_Asma,dados_MS_Asma,
-                     dados_MT_Asma,dados_PA_Asma,dados_PB_Asma,dados_PE_Asma,
-                     dados_PI_Asma,dados_PR_Asma,dados_RJ_Asma,dados_RN_Asma,
-                     dados_RO_Asma,dados_RR_Asma,dados_RS_Asma,dados_SC_Asma,
-                     dados_SE_Asma,dados_SP_Asma,dados_TO_Asma)
+                   dados_BA_Asma,dados_CE_Asma,dados_DF_Asma,dados_ES_Asma,
+                   dados_GO_Asma,dados_MA_Asma,dados_MG_Asma,dados_MS_Asma,
+                   dados_MT_Asma,dados_PA_Asma,dados_PB_Asma,dados_PE_Asma,
+                   dados_PI_Asma,dados_PR_Asma,dados_RJ_Asma,dados_RN_Asma,
+                   dados_RO_Asma,dados_RR_Asma,dados_RS_Asma,dados_SC_Asma,
+                   dados_SE_Asma,dados_SP_Asma,dados_TO_Asma)
 tryCatch({arrow::write_parquet(dados_Asma %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.parquet")},
          error = function(e) { arrow::write_parquet(dados_Asma %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.parquet') })
 tryCatch({write.xlsx(dados_Asma %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx")},
@@ -358,12 +358,12 @@ for (uf in estados) {
 }
 
 dados_Def_nut = rbind(dados_AC_Def_nut,dados_AL_Def_nut,dados_AM_Def_nut,dados_AP_Def_nut,
-                   dados_BA_Def_nut,dados_CE_Def_nut,dados_DF_Def_nut,dados_ES_Def_nut,
-                   dados_GO_Def_nut,dados_MA_Def_nut,dados_MG_Def_nut,dados_MS_Def_nut,
-                   dados_MT_Def_nut,dados_PA_Def_nut,dados_PB_Def_nut,dados_PE_Def_nut,
-                   dados_PI_Def_nut,dados_PR_Def_nut,dados_RJ_Def_nut,dados_RN_Def_nut,
-                   dados_RO_Def_nut,dados_RR_Def_nut,dados_RS_Def_nut,dados_SC_Def_nut,
-                   dados_SE_Def_nut,dados_SP_Def_nut,dados_TO_Def_nut)
+                      dados_BA_Def_nut,dados_CE_Def_nut,dados_DF_Def_nut,dados_ES_Def_nut,
+                      dados_GO_Def_nut,dados_MA_Def_nut,dados_MG_Def_nut,dados_MS_Def_nut,
+                      dados_MT_Def_nut,dados_PA_Def_nut,dados_PB_Def_nut,dados_PE_Def_nut,
+                      dados_PI_Def_nut,dados_PR_Def_nut,dados_RJ_Def_nut,dados_RN_Def_nut,
+                      dados_RO_Def_nut,dados_RR_Def_nut,dados_RS_Def_nut,dados_SC_Def_nut,
+                      dados_SE_Def_nut,dados_SP_Def_nut,dados_TO_Def_nut)
 tryCatch({arrow::write_parquet(dados_Def_nut %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.parquet")},
          error = function(e) { arrow::write_parquet(dados_Def_nut %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.parquet') })
 tryCatch({write.xlsx(dados_Def_nut %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.xlsx")},
@@ -412,12 +412,12 @@ for (uf in estados) {
 }
 
 dados_Diabetes = rbind(dados_AC_Diabetes,dados_AL_Diabetes,dados_AM_Diabetes,dados_AP_Diabetes,
-                   dados_BA_Diabetes,dados_CE_Diabetes,dados_DF_Diabetes,dados_ES_Diabetes,
-                   dados_GO_Diabetes,dados_MA_Diabetes,dados_MG_Diabetes,dados_MS_Diabetes,
-                   dados_MT_Diabetes,dados_PA_Diabetes,dados_PB_Diabetes,dados_PE_Diabetes,
-                   dados_PI_Diabetes,dados_PR_Diabetes,dados_RJ_Diabetes,dados_RN_Diabetes,
-                   dados_RO_Diabetes,dados_RR_Diabetes,dados_RS_Diabetes,dados_SC_Diabetes,
-                   dados_SE_Diabetes,dados_SP_Diabetes,dados_TO_Diabetes)
+                       dados_BA_Diabetes,dados_CE_Diabetes,dados_DF_Diabetes,dados_ES_Diabetes,
+                       dados_GO_Diabetes,dados_MA_Diabetes,dados_MG_Diabetes,dados_MS_Diabetes,
+                       dados_MT_Diabetes,dados_PA_Diabetes,dados_PB_Diabetes,dados_PE_Diabetes,
+                       dados_PI_Diabetes,dados_PR_Diabetes,dados_RJ_Diabetes,dados_RN_Diabetes,
+                       dados_RO_Diabetes,dados_RR_Diabetes,dados_RS_Diabetes,dados_SC_Diabetes,
+                       dados_SE_Diabetes,dados_SP_Diabetes,dados_TO_Diabetes)
 tryCatch({arrow::write_parquet(dados_Diabetes %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.parquet")},
          error = function(e) { arrow::write_parquet(dados_Diabetes %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.parquet') })
 tryCatch({write.xlsx(dados_Diabetes %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.xlsx")},
@@ -659,44 +659,26 @@ dados_SC_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SC, c("A15","A16","A17","A18",
 dados_SE_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SE, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
 dados_SP_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SP, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
 dados_TO_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_TO, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-
-arrow::write_parquet(dados_AC_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_AC_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_AL_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_AL_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_AM_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_AM_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_AP_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_AP_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_BA_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_BA_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_CE_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_CE_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_DF_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_DF_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_ES_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_ES_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_GO_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_GO_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_MA_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_MA_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_MG_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_MG_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_MS_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_MS_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_MT_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_MT_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_PA_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_PA_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_PB_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_PB_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_PE_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_PE_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_PI_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_PI_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_PR_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_PR_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_RJ_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_RJ_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_RN_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_RN_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_RO_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_RO_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_RR_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_RR_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_RS_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_RS_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_SC_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_SC_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_SE_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_SE_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_SP_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_SP_D_P_Imu_Cond_Evit.parquet')
-arrow::write_parquet(dados_TO_D_P_Imu_Cond_Evit %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_TO_D_P_Imu_Cond_Evit.parquet')
-
-dados_D_P_Imu_Cond_Evit = 
-  rbind(dados_AC_D_P_Imu_Cond_Evit,dados_AL_D_P_Imu_Cond_Evit,dados_AM_D_P_Imu_Cond_Evit,dados_AP_D_P_Imu_Cond_Evit,
-        dados_BA_D_P_Imu_Cond_Evit,dados_CE_D_P_Imu_Cond_Evit,dados_DF_D_P_Imu_Cond_Evit,dados_ES_D_P_Imu_Cond_Evit,
-        dados_GO_D_P_Imu_Cond_Evit,dados_MA_D_P_Imu_Cond_Evit,dados_MG_D_P_Imu_Cond_Evit,dados_MS_D_P_Imu_Cond_Evit,
-        dados_MT_D_P_Imu_Cond_Evit,dados_PA_D_P_Imu_Cond_Evit,dados_PB_D_P_Imu_Cond_Evit,dados_PE_D_P_Imu_Cond_Evit,
-        dados_PI_D_P_Imu_Cond_Evit,dados_PR_D_P_Imu_Cond_Evit,dados_RJ_D_P_Imu_Cond_Evit,dados_RN_D_P_Imu_Cond_Evit,
-        dados_RO_D_P_Imu_Cond_Evit,dados_RR_D_P_Imu_Cond_Evit,dados_RS_D_P_Imu_Cond_Evit,dados_SC_D_P_Imu_Cond_Evit,
-        dados_SE_D_P_Imu_Cond_Evit,dados_SP_D_P_Imu_Cond_Evit,dados_TO_D_P_Imu_Cond_Evit)
-arrow::write_parquet(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_Doenças_preveníveis_por_imunização_e_condições_evitáveis.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_P_Imu_Cond_Evit")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_", uf, "_D_P_Imu_Cond_Evit.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_P_Imu_Cond_Evit")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_", uf, "_D_P_Imu_Cond_Evit.parquet")) })
+}
+dados_D_P_Imu_Cond_Evit = rbind(dados_AC_D_P_Imu_Cond_Evit,dados_AL_D_P_Imu_Cond_Evit,dados_AM_D_P_Imu_Cond_Evit,dados_AP_D_P_Imu_Cond_Evit,
+                                 dados_BA_D_P_Imu_Cond_Evit,dados_CE_D_P_Imu_Cond_Evit,dados_DF_D_P_Imu_Cond_Evit,dados_ES_D_P_Imu_Cond_Evit,
+                                 dados_GO_D_P_Imu_Cond_Evit,dados_MA_D_P_Imu_Cond_Evit,dados_MG_D_P_Imu_Cond_Evit,dados_MS_D_P_Imu_Cond_Evit,
+                                 dados_MT_D_P_Imu_Cond_Evit,dados_PA_D_P_Imu_Cond_Evit,dados_PB_D_P_Imu_Cond_Evit,dados_PE_D_P_Imu_Cond_Evit,
+                                 dados_PI_D_P_Imu_Cond_Evit,dados_PR_D_P_Imu_Cond_Evit,dados_RJ_D_P_Imu_Cond_Evit,dados_RN_D_P_Imu_Cond_Evit,
+                                 dados_RO_D_P_Imu_Cond_Evit,dados_RR_D_P_Imu_Cond_Evit,dados_RS_D_P_Imu_Cond_Evit,dados_SC_D_P_Imu_Cond_Evit,
+                                 dados_SE_D_P_Imu_Cond_Evit,dados_SP_D_P_Imu_Cond_Evit,dados_TO_D_P_Imu_Cond_Evit)
+tryCatch({arrow::write_parquet(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.parquet') })
+tryCatch({write.xlsx(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx")},
+         error = function(e) { write.xlsx(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx") })
 
 ####===========================================
 #### Doenças relacionadas ao Pré-Natal e Parto
@@ -728,44 +710,26 @@ dados_SC_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SC, c("B20","B21","B22","B23"
 dados_SE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SE, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
 dados_SP_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SP, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
 dados_TO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_TO, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-
-arrow::write_parquet(dados_AC_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_AC_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_AL_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_AL_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_AM_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_AM_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_AP_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_AP_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_BA_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_BA_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_CE_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_CE_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_DF_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_DF_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_ES_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_ES_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_GO_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_GO_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_MA_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_MA_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_MG_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_MG_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_MS_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_MS_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_MT_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_MT_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_PA_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_PA_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_PB_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_PB_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_PE_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_PE_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_PI_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_PI_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_PR_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_PR_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_RJ_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_RJ_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_RN_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_RN_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_RO_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_RO_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_RR_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_RR_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_RS_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_RS_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_SC_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_SC_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_SE_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_SE_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_SP_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_SP_D_Rel_PreNat_Parto.parquet')
-arrow::write_parquet(dados_TO_D_Rel_PreNat_Parto %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_TO_D_Rel_PreNat_Parto.parquet')
-
-dados_D_Rel_PreNat_Parto = 
-  rbind(dados_AC_D_Rel_PreNat_Parto,dados_AL_D_Rel_PreNat_Parto,dados_AM_D_Rel_PreNat_Parto,dados_AP_D_Rel_PreNat_Parto,
-        dados_BA_D_Rel_PreNat_Parto,dados_CE_D_Rel_PreNat_Parto,dados_DF_D_Rel_PreNat_Parto,dados_ES_D_Rel_PreNat_Parto,
-        dados_GO_D_Rel_PreNat_Parto,dados_MA_D_Rel_PreNat_Parto,dados_MG_D_Rel_PreNat_Parto,dados_MS_D_Rel_PreNat_Parto,
-        dados_MT_D_Rel_PreNat_Parto,dados_PA_D_Rel_PreNat_Parto,dados_PB_D_Rel_PreNat_Parto,dados_PE_D_Rel_PreNat_Parto,
-        dados_PI_D_Rel_PreNat_Parto,dados_PR_D_Rel_PreNat_Parto,dados_RJ_D_Rel_PreNat_Parto,dados_RN_D_Rel_PreNat_Parto,
-        dados_RO_D_Rel_PreNat_Parto,dados_RR_D_Rel_PreNat_Parto,dados_RS_D_Rel_PreNat_Parto,dados_SC_D_Rel_PreNat_Parto,
-        dados_SE_D_Rel_PreNat_Parto,dados_SP_D_Rel_PreNat_Parto,dados_TO_D_Rel_PreNat_Parto)
-arrow::write_parquet(dados_D_Rel_PreNat_Parto %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_Doenças_relacionadas_ao_PréNatal_e_Parto.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_Rel_PreNat_Parto")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_", uf, "_D_Rel_PreNat_Parto.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_Rel_PreNat_Parto")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_", uf, "_D_Rel_PreNat_Parto.parquet")) })
+}
+dados_D_Rel_PreNat_Parto = rbind(dados_AC_D_Rel_PreNat_Parto,dados_AL_D_Rel_PreNat_Parto,dados_AM_D_Rel_PreNat_Parto,dados_AP_D_Rel_PreNat_Parto,
+                         dados_BA_D_Rel_PreNat_Parto,dados_CE_D_Rel_PreNat_Parto,dados_DF_D_Rel_PreNat_Parto,dados_ES_D_Rel_PreNat_Parto,
+                         dados_GO_D_Rel_PreNat_Parto,dados_MA_D_Rel_PreNat_Parto,dados_MG_D_Rel_PreNat_Parto,dados_MS_D_Rel_PreNat_Parto,
+                         dados_MT_D_Rel_PreNat_Parto,dados_PA_D_Rel_PreNat_Parto,dados_PB_D_Rel_PreNat_Parto,dados_PE_D_Rel_PreNat_Parto,
+                         dados_PI_D_Rel_PreNat_Parto,dados_PR_D_Rel_PreNat_Parto,dados_RJ_D_Rel_PreNat_Parto,dados_RN_D_Rel_PreNat_Parto,
+                         dados_RO_D_Rel_PreNat_Parto,dados_RR_D_Rel_PreNat_Parto,dados_RS_D_Rel_PreNat_Parto,dados_SC_D_Rel_PreNat_Parto,
+                         dados_SE_D_Rel_PreNat_Parto,dados_SP_D_Rel_PreNat_Parto,dados_TO_D_Rel_PreNat_Parto)
+tryCatch({arrow::write_parquet(dados_D_Rel_PreNat_Parto %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Rel_PreNat_Parto %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.parquet') })
+tryCatch({write.xlsx(dados_D_Rel_PreNat_Parto %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Rel_PreNat_Parto %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx") })
 
 ####============
 #### Epilepsias
@@ -797,35 +761,15 @@ dados_SC_Epilepsias = FiltraDadosCID(dados_SC, c("J45","J46"))
 dados_SE_Epilepsias = FiltraDadosCID(dados_SE, c("J45","J46"))
 dados_SP_Epilepsias = FiltraDadosCID(dados_SP, c("J45","J46"))
 dados_TO_Epilepsias = FiltraDadosCID(dados_TO, c("J45","J46"))
-
-arrow::write_parquet(dados_AC_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_AC_Epilepsias.parquet')
-arrow::write_parquet(dados_AL_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_AL_Epilepsias.parquet')
-arrow::write_parquet(dados_AM_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_AM_Epilepsias.parquet')
-arrow::write_parquet(dados_AP_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_AP_Epilepsias.parquet')
-arrow::write_parquet(dados_BA_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_BA_Epilepsias.parquet')
-arrow::write_parquet(dados_CE_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_CE_Epilepsias.parquet')
-arrow::write_parquet(dados_DF_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_DF_Epilepsias.parquet')
-arrow::write_parquet(dados_ES_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_ES_Epilepsias.parquet')
-arrow::write_parquet(dados_GO_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_GO_Epilepsias.parquet')
-arrow::write_parquet(dados_MA_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_MA_Epilepsias.parquet')
-arrow::write_parquet(dados_MG_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_MG_Epilepsias.parquet')
-arrow::write_parquet(dados_MS_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_MS_Epilepsias.parquet')
-arrow::write_parquet(dados_MT_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_MT_Epilepsias.parquet')
-arrow::write_parquet(dados_PA_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_PA_Epilepsias.parquet')
-arrow::write_parquet(dados_PB_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_PB_Epilepsias.parquet')
-arrow::write_parquet(dados_PE_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_PE_Epilepsias.parquet')
-arrow::write_parquet(dados_PI_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_PI_Epilepsias.parquet')
-arrow::write_parquet(dados_PR_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_PR_Epilepsias.parquet')
-arrow::write_parquet(dados_RJ_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_RJ_Epilepsias.parquet')
-arrow::write_parquet(dados_RN_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_RN_Epilepsias.parquet')
-arrow::write_parquet(dados_RO_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_RO_Epilepsias.parquet')
-arrow::write_parquet(dados_RR_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_RR_Epilepsias.parquet')
-arrow::write_parquet(dados_RS_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_RS_Epilepsias.parquet')
-arrow::write_parquet(dados_SC_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_SC_Epilepsias.parquet')
-arrow::write_parquet(dados_SE_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_SE_Epilepsias.parquet')
-arrow::write_parquet(dados_SP_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_SP_Epilepsias.parquet')
-arrow::write_parquet(dados_TO_Epilepsias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_TO_Epilepsias.parquet')
-
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Epilepsias")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Epilepsias/dados_", uf, "_Epilepsias.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Epilepsias")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_", uf, "_Epilepsias.parquet")) })
+}
 dados_Epilepsias = rbind(dados_AC_Epilepsias,dados_AL_Epilepsias,dados_AM_Epilepsias,dados_AP_Epilepsias,
                          dados_BA_Epilepsias,dados_CE_Epilepsias,dados_DF_Epilepsias,dados_ES_Epilepsias,
                          dados_GO_Epilepsias,dados_MA_Epilepsias,dados_MG_Epilepsias,dados_MS_Epilepsias,
@@ -833,7 +777,10 @@ dados_Epilepsias = rbind(dados_AC_Epilepsias,dados_AL_Epilepsias,dados_AM_Epilep
                          dados_PI_Epilepsias,dados_PR_Epilepsias,dados_RJ_Epilepsias,dados_RN_Epilepsias,
                          dados_RO_Epilepsias,dados_RR_Epilepsias,dados_RS_Epilepsias,dados_SC_Epilepsias,
                          dados_SE_Epilepsias,dados_SP_Epilepsias,dados_TO_Epilepsias)
-arrow::write_parquet(dados_Epilepsias %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.parquet")
+tryCatch({arrow::write_parquet(dados_Epilepsias %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Epilepsias %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.parquet') })
+tryCatch({write.xlsx(dados_Epilepsias %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.xlsx")},
+         error = function(e) { write.xlsx(dados_Epilepsias %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.xlsx") })
 
 ####============================================
 #### Gastroenterites Infecciosas e complicações
@@ -865,44 +812,26 @@ dados_SC_Gastro_Inf_Comp = FiltraDadosCID(dados_SC, c("A00","A01","A02","A03","A
 dados_SE_Gastro_Inf_Comp = FiltraDadosCID(dados_SE, c("A00","A01","A02","A03","A04","A05","A06","A07","A08","A09","E86"))
 dados_SP_Gastro_Inf_Comp = FiltraDadosCID(dados_SP, c("A00","A01","A02","A03","A04","A05","A06","A07","A08","A09","E86"))
 dados_TO_Gastro_Inf_Comp = FiltraDadosCID(dados_TO, c("A00","A01","A02","A03","A04","A05","A06","A07","A08","A09","E86"))
-
-arrow::write_parquet(dados_AC_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_AC_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_AL_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_AL_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_AM_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_AM_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_AP_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_AP_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_BA_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_BA_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_CE_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_CE_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_DF_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_DF_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_ES_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_ES_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_GO_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_GO_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_MA_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_MA_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_MG_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_MG_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_MS_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_MS_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_MT_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_MT_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_PA_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_PA_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_PB_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_PB_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_PE_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_PE_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_PI_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_PI_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_PR_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_PR_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_RJ_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_RJ_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_RN_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_RN_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_RO_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_RO_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_RR_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_RR_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_RS_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_RS_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_SC_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_SC_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_SE_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_SE_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_SP_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_SP_Gastro_Inf_Comp.parquet')
-arrow::write_parquet(dados_TO_Gastro_Inf_Comp %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_TO_Gastro_Inf_Comp.parquet')
-
-dados_Gastro_Inf_Comp = 
-  rbind(dados_AC_Gastro_Inf_Comp,dados_AL_Gastro_Inf_Comp,dados_AM_Gastro_Inf_Comp,dados_AP_Gastro_Inf_Comp,
-        dados_BA_Gastro_Inf_Comp,dados_CE_Gastro_Inf_Comp,dados_DF_Gastro_Inf_Comp,dados_ES_Gastro_Inf_Comp,
-        dados_GO_Gastro_Inf_Comp,dados_MA_Gastro_Inf_Comp,dados_MG_Gastro_Inf_Comp,dados_MS_Gastro_Inf_Comp,
-        dados_MT_Gastro_Inf_Comp,dados_PA_Gastro_Inf_Comp,dados_PB_Gastro_Inf_Comp,dados_PE_Gastro_Inf_Comp,
-        dados_PI_Gastro_Inf_Comp,dados_PR_Gastro_Inf_Comp,dados_RJ_Gastro_Inf_Comp,dados_RN_Gastro_Inf_Comp,
-        dados_RO_Gastro_Inf_Comp,dados_RR_Gastro_Inf_Comp,dados_RS_Gastro_Inf_Comp,dados_SC_Gastro_Inf_Comp,
-        dados_SE_Gastro_Inf_Comp,dados_SP_Gastro_Inf_Comp,dados_TO_Gastro_Inf_Comp)
-arrow::write_parquet(dados_Gastro_Inf_Comp %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastroenterites_Infecciosas_e_complicações.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Gastro_Inf_Comp")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_", uf, "_Gastro_Inf_Comp.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Gastro_Inf_Comp")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_", uf, "_Gastro_Inf_Comp.parquet")) })
+}
+dados_Gastro_Inf_Comp = rbind(dados_AC_Gastro_Inf_Comp,dados_AL_Gastro_Inf_Comp,dados_AM_Gastro_Inf_Comp,dados_AP_Gastro_Inf_Comp,
+                              dados_BA_Gastro_Inf_Comp,dados_CE_Gastro_Inf_Comp,dados_DF_Gastro_Inf_Comp,dados_ES_Gastro_Inf_Comp,
+                              dados_GO_Gastro_Inf_Comp,dados_MA_Gastro_Inf_Comp,dados_MG_Gastro_Inf_Comp,dados_MS_Gastro_Inf_Comp,
+                              dados_MT_Gastro_Inf_Comp,dados_PA_Gastro_Inf_Comp,dados_PB_Gastro_Inf_Comp,dados_PE_Gastro_Inf_Comp,
+                              dados_PI_Gastro_Inf_Comp,dados_PR_Gastro_Inf_Comp,dados_RJ_Gastro_Inf_Comp,dados_RN_Gastro_Inf_Comp,
+                              dados_RO_Gastro_Inf_Comp,dados_RR_Gastro_Inf_Comp,dados_RS_Gastro_Inf_Comp,dados_SC_Gastro_Inf_Comp,
+                              dados_SE_Gastro_Inf_Comp,dados_SP_Gastro_Inf_Comp,dados_TO_Gastro_Inf_Comp)
+tryCatch({arrow::write_parquet(dados_Gastro_Inf_Comp %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Gastro_Inf_Comp %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.parquet') })
+tryCatch({write.xlsx(dados_Gastro_Inf_Comp %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.xlsx")},
+         error = function(e) { write.xlsx(dados_Gastro_Inf_Comp %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.xlsx") })
 
 ####=============
 #### Hipertensão
@@ -934,35 +863,15 @@ dados_SC_Hipertensao = FiltraDadosCID(dados_SC, c("I10","I11"))
 dados_SE_Hipertensao = FiltraDadosCID(dados_SE, c("I10","I11"))
 dados_SP_Hipertensao = FiltraDadosCID(dados_SP, c("I10","I11"))
 dados_TO_Hipertensao = FiltraDadosCID(dados_TO, c("I10","I11"))
-
-arrow::write_parquet(dados_AC_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_AC_Hipertensao.parquet')
-arrow::write_parquet(dados_AL_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_AL_Hipertensao.parquet')
-arrow::write_parquet(dados_AM_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_AM_Hipertensao.parquet')
-arrow::write_parquet(dados_AP_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_AP_Hipertensao.parquet')
-arrow::write_parquet(dados_BA_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_BA_Hipertensao.parquet')
-arrow::write_parquet(dados_CE_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_CE_Hipertensao.parquet')
-arrow::write_parquet(dados_DF_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_DF_Hipertensao.parquet')
-arrow::write_parquet(dados_ES_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_ES_Hipertensao.parquet')
-arrow::write_parquet(dados_GO_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_GO_Hipertensao.parquet')
-arrow::write_parquet(dados_MA_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_MA_Hipertensao.parquet')
-arrow::write_parquet(dados_MG_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_MG_Hipertensao.parquet')
-arrow::write_parquet(dados_MS_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_MS_Hipertensao.parquet')
-arrow::write_parquet(dados_MT_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_MT_Hipertensao.parquet')
-arrow::write_parquet(dados_PA_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_PA_Hipertensao.parquet')
-arrow::write_parquet(dados_PB_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_PB_Hipertensao.parquet')
-arrow::write_parquet(dados_PE_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_PE_Hipertensao.parquet')
-arrow::write_parquet(dados_PI_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_PI_Hipertensao.parquet')
-arrow::write_parquet(dados_PR_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_PR_Hipertensao.parquet')
-arrow::write_parquet(dados_RJ_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_RJ_Hipertensao.parquet')
-arrow::write_parquet(dados_RN_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_RN_Hipertensao.parquet')
-arrow::write_parquet(dados_RO_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_RO_Hipertensao.parquet')
-arrow::write_parquet(dados_RR_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_RR_Hipertensao.parquet')
-arrow::write_parquet(dados_RS_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_RS_Hipertensao.parquet')
-arrow::write_parquet(dados_SC_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_SC_Hipertensao.parquet')
-arrow::write_parquet(dados_SE_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_SE_Hipertensao.parquet')
-arrow::write_parquet(dados_SP_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_SP_Hipertensao.parquet')
-arrow::write_parquet(dados_TO_Hipertensao %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_TO_Hipertensao.parquet')
-
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Hipertensao")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Hipertensão/dados_", uf, "_Hipertensao.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Hipertensao")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_", uf, "_Hipertensao.parquet")) })
+}
 dados_Hipertensao = rbind(dados_AC_Hipertensao,dados_AL_Hipertensao,dados_AM_Hipertensao,dados_AP_Hipertensao,
                           dados_BA_Hipertensao,dados_CE_Hipertensao,dados_DF_Hipertensao,dados_ES_Hipertensao,
                           dados_GO_Hipertensao,dados_MA_Hipertensao,dados_MG_Hipertensao,dados_MS_Hipertensao,
@@ -970,7 +879,10 @@ dados_Hipertensao = rbind(dados_AC_Hipertensao,dados_AL_Hipertensao,dados_AM_Hip
                           dados_PI_Hipertensao,dados_PR_Hipertensao,dados_RJ_Hipertensao,dados_RN_Hipertensao,
                           dados_RO_Hipertensao,dados_RR_Hipertensao,dados_RS_Hipertensao,dados_SC_Hipertensao,
                           dados_SE_Hipertensao,dados_SP_Hipertensao,dados_TO_Hipertensao)
-arrow::write_parquet(dados_Hipertensao %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensão.parquet")
+tryCatch({arrow::write_parquet(dados_Hipertensao %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Hipertensao %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.parquet') })
+tryCatch({write.xlsx(dados_Hipertensao %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.xlsx")},
+         error = function(e) { write.xlsx(dados_Hipertensao %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.xlsx") })
 
 ####======================================
 #### Infecção da pele e tecido subcutâneo
@@ -1002,44 +914,26 @@ dados_SC_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SC, c("A46","L01","L02","L03","
 dados_SE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SE, c("A46","L01","L02","L03","L04","L08"))
 dados_SP_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SP, c("A46","L01","L02","L03","L04","L08"))
 dados_TO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_TO, c("A46","L01","L02","L03","L04","L08"))
-
-arrow::write_parquet(dados_AC_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_AC_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_AL_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_AL_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_AM_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_AM_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_AP_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_AP_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_BA_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_BA_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_CE_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_CE_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_DF_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_DF_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_ES_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_ES_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_GO_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_GO_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_MA_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_MA_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_MG_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_MG_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_MS_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_MS_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_MT_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_MT_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_PA_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_PA_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_PB_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_PB_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_PE_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_PE_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_PI_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_PI_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_PR_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_PR_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_RJ_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_RJ_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_RN_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_RN_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_RO_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_RO_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_RR_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_RR_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_RS_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_RS_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_SC_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_SC_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_SE_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_SE_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_SP_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_SP_Inf_Pele_Tec_Sub.parquet')
-arrow::write_parquet(dados_TO_Inf_Pele_Tec_Sub %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_TO_Inf_Pele_Tec_Sub.parquet')
-
-dados_Inf_Pele_Tec_Sub = 
-  rbind(dados_AC_Inf_Pele_Tec_Sub,dados_AL_Inf_Pele_Tec_Sub,dados_AM_Inf_Pele_Tec_Sub,dados_AP_Inf_Pele_Tec_Sub,
-        dados_BA_Inf_Pele_Tec_Sub,dados_CE_Inf_Pele_Tec_Sub,dados_DF_Inf_Pele_Tec_Sub,dados_ES_Inf_Pele_Tec_Sub,
-        dados_GO_Inf_Pele_Tec_Sub,dados_MA_Inf_Pele_Tec_Sub,dados_MG_Inf_Pele_Tec_Sub,dados_MS_Inf_Pele_Tec_Sub,
-        dados_MT_Inf_Pele_Tec_Sub,dados_PA_Inf_Pele_Tec_Sub,dados_PB_Inf_Pele_Tec_Sub,dados_PE_Inf_Pele_Tec_Sub,
-        dados_PI_Inf_Pele_Tec_Sub,dados_PR_Inf_Pele_Tec_Sub,dados_RJ_Inf_Pele_Tec_Sub,dados_RN_Inf_Pele_Tec_Sub,
-        dados_RO_Inf_Pele_Tec_Sub,dados_RR_Inf_Pele_Tec_Sub,dados_RS_Inf_Pele_Tec_Sub,dados_SC_Inf_Pele_Tec_Sub,
-        dados_SE_Inf_Pele_Tec_Sub,dados_SP_Inf_Pele_Tec_Sub,dados_TO_Inf_Pele_Tec_Sub)
-arrow::write_parquet(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Infecção_da_pele_e_tecido_subcutâneo.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Inf_Pele_Tec_Sub")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_", uf, "_Inf_Pele_Tec_Sub.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Inf_Pele_Tec_Sub")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_", uf, "_Inf_Pele_Tec_Sub.parquet")) })
+}
+dados_Inf_Pele_Tec_Sub = rbind(dados_AC_Inf_Pele_Tec_Sub,dados_AL_Inf_Pele_Tec_Sub,dados_AM_Inf_Pele_Tec_Sub,dados_AP_Inf_Pele_Tec_Sub,
+                               dados_BA_Inf_Pele_Tec_Sub,dados_CE_Inf_Pele_Tec_Sub,dados_DF_Inf_Pele_Tec_Sub,dados_ES_Inf_Pele_Tec_Sub,
+                               dados_GO_Inf_Pele_Tec_Sub,dados_MA_Inf_Pele_Tec_Sub,dados_MG_Inf_Pele_Tec_Sub,dados_MS_Inf_Pele_Tec_Sub,
+                               dados_MT_Inf_Pele_Tec_Sub,dados_PA_Inf_Pele_Tec_Sub,dados_PB_Inf_Pele_Tec_Sub,dados_PE_Inf_Pele_Tec_Sub,
+                               dados_PI_Inf_Pele_Tec_Sub,dados_PR_Inf_Pele_Tec_Sub,dados_RJ_Inf_Pele_Tec_Sub,dados_RN_Inf_Pele_Tec_Sub,
+                               dados_RO_Inf_Pele_Tec_Sub,dados_RR_Inf_Pele_Tec_Sub,dados_RS_Inf_Pele_Tec_Sub,dados_SC_Inf_Pele_Tec_Sub,
+                               dados_SE_Inf_Pele_Tec_Sub,dados_SP_Inf_Pele_Tec_Sub,dados_TO_Inf_Pele_Tec_Sub)
+tryCatch({arrow::write_parquet(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.parquet') })
+tryCatch({write.xlsx(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.xlsx")},
+         error = function(e) { write.xlsx(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.xlsx") })
 
 ####=====================================
 #### Infecção no Rim e no Trato Urinário
@@ -1071,44 +965,26 @@ dados_SC_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SC, c("N00","N10","N11","N12","N
 dados_SE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SE, c("N00","N10","N11","N12","N15","N30","N34","N39"))
 dados_SP_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SP, c("N00","N10","N11","N12","N15","N30","N34","N39"))
 dados_TO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_TO, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-
-arrow::write_parquet(dados_AC_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_AC_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_AL_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_AL_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_AM_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_AM_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_AP_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_AP_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_BA_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_BA_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_CE_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_CE_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_DF_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_DF_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_ES_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_ES_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_GO_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_GO_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_MA_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_MA_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_MG_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_MG_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_MS_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_MS_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_MT_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_MT_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_PA_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_PA_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_PB_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_PB_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_PE_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_PE_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_PI_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_PI_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_PR_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_PR_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_RJ_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_RJ_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_RN_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_RN_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_RO_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_RO_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_RR_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_RR_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_RS_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_RS_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_SC_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_SC_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_SE_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_SE_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_SP_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_SP_Inf_Rim_Tr_Urin.parquet')
-arrow::write_parquet(dados_TO_Inf_Rim_Tr_Urin %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_TO_Inf_Rim_Tr_Urin.parquet')
-
-dados_Inf_Rim_Tr_Urin = 
-  rbind(dados_AC_Inf_Rim_Tr_Urin,dados_AL_Inf_Rim_Tr_Urin,dados_AM_Inf_Rim_Tr_Urin,dados_AP_Inf_Rim_Tr_Urin,
-        dados_BA_Inf_Rim_Tr_Urin,dados_CE_Inf_Rim_Tr_Urin,dados_DF_Inf_Rim_Tr_Urin,dados_ES_Inf_Rim_Tr_Urin,
-        dados_GO_Inf_Rim_Tr_Urin,dados_MA_Inf_Rim_Tr_Urin,dados_MG_Inf_Rim_Tr_Urin,dados_MS_Inf_Rim_Tr_Urin,
-        dados_MT_Inf_Rim_Tr_Urin,dados_PA_Inf_Rim_Tr_Urin,dados_PB_Inf_Rim_Tr_Urin,dados_PE_Inf_Rim_Tr_Urin,
-        dados_PI_Inf_Rim_Tr_Urin,dados_PR_Inf_Rim_Tr_Urin,dados_RJ_Inf_Rim_Tr_Urin,dados_RN_Inf_Rim_Tr_Urin,
-        dados_RO_Inf_Rim_Tr_Urin,dados_RR_Inf_Rim_Tr_Urin,dados_RS_Inf_Rim_Tr_Urin,dados_SC_Inf_Rim_Tr_Urin,
-        dados_SE_Inf_Rim_Tr_Urin,dados_SP_Inf_Rim_Tr_Urin,dados_TO_Inf_Rim_Tr_Urin)
-arrow::write_parquet(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Infecção_no_Rim_e_no_Trato_Urinário.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Inf_Rim_Tr_Urin")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_", uf, "_Inf_Rim_Tr_Urin.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Inf_Rim_Tr_Urin")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_", uf, "_Inf_Rim_Tr_Urin.parquet")) })
+}
+dados_Inf_Rim_Tr_Urin = rbind(dados_AC_Inf_Rim_Tr_Urin,dados_AL_Inf_Rim_Tr_Urin,dados_AM_Inf_Rim_Tr_Urin,dados_AP_Inf_Rim_Tr_Urin,
+                              dados_BA_Inf_Rim_Tr_Urin,dados_CE_Inf_Rim_Tr_Urin,dados_DF_Inf_Rim_Tr_Urin,dados_ES_Inf_Rim_Tr_Urin,
+                              dados_GO_Inf_Rim_Tr_Urin,dados_MA_Inf_Rim_Tr_Urin,dados_MG_Inf_Rim_Tr_Urin,dados_MS_Inf_Rim_Tr_Urin,
+                              dados_MT_Inf_Rim_Tr_Urin,dados_PA_Inf_Rim_Tr_Urin,dados_PB_Inf_Rim_Tr_Urin,dados_PE_Inf_Rim_Tr_Urin,
+                              dados_PI_Inf_Rim_Tr_Urin,dados_PR_Inf_Rim_Tr_Urin,dados_RJ_Inf_Rim_Tr_Urin,dados_RN_Inf_Rim_Tr_Urin,
+                              dados_RO_Inf_Rim_Tr_Urin,dados_RR_Inf_Rim_Tr_Urin,dados_RS_Inf_Rim_Tr_Urin,dados_SC_Inf_Rim_Tr_Urin,
+                              dados_SE_Inf_Rim_Tr_Urin,dados_SP_Inf_Rim_Tr_Urin,dados_TO_Inf_Rim_Tr_Urin)
+tryCatch({arrow::write_parquet(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.parquet') })
+tryCatch({write.xlsx(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.xlsx")},
+         error = function(e) { write.xlsx(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.xlsx") })
 
 ####=======================================
 #### Infecções de ouvido, nariz e garganta
@@ -1140,44 +1016,26 @@ dados_SC_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SC, c("H66","I00","I01","I02"
 dados_SE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SE, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
 dados_SP_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SP, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
 dados_TO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_TO, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-
-arrow::write_parquet(dados_AC_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_AC_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_AL_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_AL_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_AM_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_AM_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_AP_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_AP_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_BA_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_BA_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_CE_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_CE_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_DF_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_DF_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_ES_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_ES_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_GO_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_GO_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_MA_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_MA_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_MG_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_MG_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_MS_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_MS_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_MT_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_MT_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_PA_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_PA_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_PB_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_PB_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_PE_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_PE_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_PI_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_PI_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_PR_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_PR_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_RJ_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_RJ_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_RN_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_RN_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_RO_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_RO_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_RR_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_RR_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_RS_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_RS_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_SC_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_SC_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_SE_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_SE_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_SP_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_SP_Inf_Ouv_Nariz_Garg.parquet')
-arrow::write_parquet(dados_TO_Inf_Ouv_Nariz_Garg %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_TO_Inf_Ouv_Nariz_Garg.parquet')
-
-dados_Inf_Ouv_Nariz_Garg = 
-  rbind(dados_AC_Inf_Ouv_Nariz_Garg,dados_AL_Inf_Ouv_Nariz_Garg,dados_AM_Inf_Ouv_Nariz_Garg,dados_AP_Inf_Ouv_Nariz_Garg,
-        dados_BA_Inf_Ouv_Nariz_Garg,dados_CE_Inf_Ouv_Nariz_Garg,dados_DF_Inf_Ouv_Nariz_Garg,dados_ES_Inf_Ouv_Nariz_Garg,
-        dados_GO_Inf_Ouv_Nariz_Garg,dados_MA_Inf_Ouv_Nariz_Garg,dados_MG_Inf_Ouv_Nariz_Garg,dados_MS_Inf_Ouv_Nariz_Garg,
-        dados_MT_Inf_Ouv_Nariz_Garg,dados_PA_Inf_Ouv_Nariz_Garg,dados_PB_Inf_Ouv_Nariz_Garg,dados_PE_Inf_Ouv_Nariz_Garg,
-        dados_PI_Inf_Ouv_Nariz_Garg,dados_PR_Inf_Ouv_Nariz_Garg,dados_RJ_Inf_Ouv_Nariz_Garg,dados_RN_Inf_Ouv_Nariz_Garg,
-        dados_RO_Inf_Ouv_Nariz_Garg,dados_RR_Inf_Ouv_Nariz_Garg,dados_RS_Inf_Ouv_Nariz_Garg,dados_SC_Inf_Ouv_Nariz_Garg,
-        dados_SE_Inf_Ouv_Nariz_Garg,dados_SP_Inf_Ouv_Nariz_Garg,dados_TO_Inf_Ouv_Nariz_Garg)
-arrow::write_parquet(dados_Inf_Ouv_Nariz_Garg %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Infecções_de_ouvido_nariz_e_garganta.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Inf_Ouv_Nariz_Garg")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_", uf, "_Inf_Ouv_Nariz_Garg.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Inf_Ouv_Nariz_Garg")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_", uf, "_Inf_Ouv_Nariz_Garg.parquet")) })
+}
+dados_Inf_Ouv_Nariz_Garg = rbind(dados_AC_Inf_Ouv_Nariz_Garg,dados_AL_Inf_Ouv_Nariz_Garg,dados_AM_Inf_Ouv_Nariz_Garg,dados_AP_Inf_Ouv_Nariz_Garg,
+                                 dados_BA_Inf_Ouv_Nariz_Garg,dados_CE_Inf_Ouv_Nariz_Garg,dados_DF_Inf_Ouv_Nariz_Garg,dados_ES_Inf_Ouv_Nariz_Garg,
+                                 dados_GO_Inf_Ouv_Nariz_Garg,dados_MA_Inf_Ouv_Nariz_Garg,dados_MG_Inf_Ouv_Nariz_Garg,dados_MS_Inf_Ouv_Nariz_Garg,
+                                 dados_MT_Inf_Ouv_Nariz_Garg,dados_PA_Inf_Ouv_Nariz_Garg,dados_PB_Inf_Ouv_Nariz_Garg,dados_PE_Inf_Ouv_Nariz_Garg,
+                                 dados_PI_Inf_Ouv_Nariz_Garg,dados_PR_Inf_Ouv_Nariz_Garg,dados_RJ_Inf_Ouv_Nariz_Garg,dados_RN_Inf_Ouv_Nariz_Garg,
+                                 dados_RO_Inf_Ouv_Nariz_Garg,dados_RR_Inf_Ouv_Nariz_Garg,dados_RS_Inf_Ouv_Nariz_Garg,dados_SC_Inf_Ouv_Nariz_Garg,
+                                 dados_SE_Inf_Ouv_Nariz_Garg,dados_SP_Inf_Ouv_Nariz_Garg,dados_TO_Inf_Ouv_Nariz_Garg)
+tryCatch({arrow::write_parquet(dados_Inf_Ouv_Nariz_Garg %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Inf_Ouv_Nariz_Garg %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.parquet') })
+tryCatch({write.xlsx(dados_Inf_Ouv_Nariz_Garg %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.xlsx")},
+         error = function(e) { write.xlsx(dados_Inf_Ouv_Nariz_Garg %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.xlsx") })
 
 ####========================
 #### Insuficiência Cardíaca
@@ -1209,35 +1067,15 @@ dados_SC_Insuf_Card = FiltraDadosCID(dados_SC, c("I50","J81"))
 dados_SE_Insuf_Card = FiltraDadosCID(dados_SE, c("I50","J81"))
 dados_SP_Insuf_Card = FiltraDadosCID(dados_SP, c("I50","J81"))
 dados_TO_Insuf_Card = FiltraDadosCID(dados_TO, c("I50","J81"))
-
-arrow::write_parquet(dados_AC_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_AC_Insuf_Card.parquet')
-arrow::write_parquet(dados_AL_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_AL_Insuf_Card.parquet')
-arrow::write_parquet(dados_AM_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_AM_Insuf_Card.parquet')
-arrow::write_parquet(dados_AP_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_AP_Insuf_Card.parquet')
-arrow::write_parquet(dados_BA_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_BA_Insuf_Card.parquet')
-arrow::write_parquet(dados_CE_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_CE_Insuf_Card.parquet')
-arrow::write_parquet(dados_DF_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_DF_Insuf_Card.parquet')
-arrow::write_parquet(dados_ES_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_ES_Insuf_Card.parquet')
-arrow::write_parquet(dados_GO_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_GO_Insuf_Card.parquet')
-arrow::write_parquet(dados_MA_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_MA_Insuf_Card.parquet')
-arrow::write_parquet(dados_MG_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_MG_Insuf_Card.parquet')
-arrow::write_parquet(dados_MS_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_MS_Insuf_Card.parquet')
-arrow::write_parquet(dados_MT_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_MT_Insuf_Card.parquet')
-arrow::write_parquet(dados_PA_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_PA_Insuf_Card.parquet')
-arrow::write_parquet(dados_PB_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_PB_Insuf_Card.parquet')
-arrow::write_parquet(dados_PE_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_PE_Insuf_Card.parquet')
-arrow::write_parquet(dados_PI_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_PI_Insuf_Card.parquet')
-arrow::write_parquet(dados_PR_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_PR_Insuf_Card.parquet')
-arrow::write_parquet(dados_RJ_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_RJ_Insuf_Card.parquet')
-arrow::write_parquet(dados_RN_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_RN_Insuf_Card.parquet')
-arrow::write_parquet(dados_RO_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_RO_Insuf_Card.parquet')
-arrow::write_parquet(dados_RR_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_RR_Insuf_Card.parquet')
-arrow::write_parquet(dados_RS_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_RS_Insuf_Card.parquet')
-arrow::write_parquet(dados_SC_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_SC_Insuf_Card.parquet')
-arrow::write_parquet(dados_SE_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_SE_Insuf_Card.parquet')
-arrow::write_parquet(dados_SP_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_SP_Insuf_Card.parquet')
-arrow::write_parquet(dados_TO_Insuf_Card %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_TO_Insuf_Card.parquet')
-
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Insuf_Card")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_", uf, "_Insuf_Card.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Insuf_Card")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_", uf, "_Insuf_Card.parquet")) })
+}
 dados_Insuf_Card = rbind(dados_AC_Insuf_Card,dados_AL_Insuf_Card,dados_AM_Insuf_Card,dados_AP_Insuf_Card,
                          dados_BA_Insuf_Card,dados_CE_Insuf_Card,dados_DF_Insuf_Card,dados_ES_Insuf_Card,
                          dados_GO_Insuf_Card,dados_MA_Insuf_Card,dados_MG_Insuf_Card,dados_MS_Insuf_Card,
@@ -1245,7 +1083,10 @@ dados_Insuf_Card = rbind(dados_AC_Insuf_Card,dados_AL_Insuf_Card,dados_AM_Insuf_
                          dados_PI_Insuf_Card,dados_PR_Insuf_Card,dados_RJ_Insuf_Card,dados_RN_Insuf_Card,
                          dados_RO_Insuf_Card,dados_RR_Insuf_Card,dados_RS_Insuf_Card,dados_SC_Insuf_Card,
                          dados_SE_Insuf_Card,dados_SP_Insuf_Card,dados_TO_Insuf_Card)
-arrow::write_parquet(dados_Insuf_Card %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuficiência_Cardíaca.parquet")
+tryCatch({arrow::write_parquet(dados_Insuf_Card %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Insuf_Card %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.parquet') })
+tryCatch({write.xlsx(dados_Insuf_Card %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx")},
+         error = function(e) { write.xlsx(dados_Insuf_Card %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx") })
 
 ####============================
 #### Neoplasia maligna do útero
@@ -1277,44 +1118,26 @@ dados_SC_Neo_Maligna_Utero = FiltraDadosCID(dados_SC, c("C53","C54","C55"))
 dados_SE_Neo_Maligna_Utero = FiltraDadosCID(dados_SE, c("C53","C54","C55"))
 dados_SP_Neo_Maligna_Utero = FiltraDadosCID(dados_SP, c("C53","C54","C55"))
 dados_TO_Neo_Maligna_Utero = FiltraDadosCID(dados_TO, c("C53","C54","C55"))
-
-arrow::write_parquet(dados_AC_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_AC_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_AL_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_AL_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_AM_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_AM_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_AP_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_AP_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_BA_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_BA_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_CE_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_CE_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_DF_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_DF_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_ES_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_ES_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_GO_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_GO_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_MA_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_MA_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_MG_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_MG_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_MS_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_MS_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_MT_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_MT_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_PA_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_PA_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_PB_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_PB_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_PE_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_PE_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_PI_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_PI_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_PR_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_PR_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_RJ_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_RJ_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_RN_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_RN_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_RO_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_RO_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_RR_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_RR_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_RS_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_RS_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_SC_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_SC_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_SE_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_SE_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_SP_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_SP_Neo_Maligna_Utero.parquet')
-arrow::write_parquet(dados_TO_Neo_Maligna_Utero %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_TO_Neo_Maligna_Utero.parquet')
-
-dados_Neo_Maligna_Utero = 
-  rbind(dados_AC_Neo_Maligna_Utero,dados_AL_Neo_Maligna_Utero,dados_AM_Neo_Maligna_Utero,dados_AP_Neo_Maligna_Utero,
-        dados_BA_Neo_Maligna_Utero,dados_CE_Neo_Maligna_Utero,dados_DF_Neo_Maligna_Utero,dados_ES_Neo_Maligna_Utero,
-        dados_GO_Neo_Maligna_Utero,dados_MA_Neo_Maligna_Utero,dados_MG_Neo_Maligna_Utero,dados_MS_Neo_Maligna_Utero,
-        dados_MT_Neo_Maligna_Utero,dados_PA_Neo_Maligna_Utero,dados_PB_Neo_Maligna_Utero,dados_PE_Neo_Maligna_Utero,
-        dados_PI_Neo_Maligna_Utero,dados_PR_Neo_Maligna_Utero,dados_RJ_Neo_Maligna_Utero,dados_RN_Neo_Maligna_Utero,
-        dados_RO_Neo_Maligna_Utero,dados_RR_Neo_Maligna_Utero,dados_RS_Neo_Maligna_Utero,dados_SC_Neo_Maligna_Utero,
-        dados_SE_Neo_Maligna_Utero,dados_SP_Neo_Maligna_Utero,dados_TO_Neo_Maligna_Utero)
-arrow::write_parquet(dados_Neo_Maligna_Utero %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neoplasia_maligna_do_útero.parquet")
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Neo_Maligna_Utero")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_", uf, "_Neo_Maligna_Utero.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Neo_Maligna_Utero")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_", uf, "_Neo_Maligna_Utero.parquet")) })
+}
+dados_Neo_Maligna_Utero = rbind(dados_AC_Neo_Maligna_Utero,dados_AL_Neo_Maligna_Utero,dados_AM_Neo_Maligna_Utero,dados_AP_Neo_Maligna_Utero,
+                                dados_BA_Neo_Maligna_Utero,dados_CE_Neo_Maligna_Utero,dados_DF_Neo_Maligna_Utero,dados_ES_Neo_Maligna_Utero,
+                                dados_GO_Neo_Maligna_Utero,dados_MA_Neo_Maligna_Utero,dados_MG_Neo_Maligna_Utero,dados_MS_Neo_Maligna_Utero,
+                                dados_MT_Neo_Maligna_Utero,dados_PA_Neo_Maligna_Utero,dados_PB_Neo_Maligna_Utero,dados_PE_Neo_Maligna_Utero,
+                                dados_PI_Neo_Maligna_Utero,dados_PR_Neo_Maligna_Utero,dados_RJ_Neo_Maligna_Utero,dados_RN_Neo_Maligna_Utero,
+                                dados_RO_Neo_Maligna_Utero,dados_RR_Neo_Maligna_Utero,dados_RS_Neo_Maligna_Utero,dados_SC_Neo_Maligna_Utero,
+                                dados_SE_Neo_Maligna_Utero,dados_SP_Neo_Maligna_Utero,dados_TO_Neo_Maligna_Utero)
+tryCatch({arrow::write_parquet(dados_Neo_Maligna_Utero %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Neo_Maligna_Utero %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.parquet') })
+tryCatch({write.xlsx(dados_Neo_Maligna_Utero %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx")},
+         error = function(e) { write.xlsx(dados_Neo_Maligna_Utero %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx") })
 
 ####============
 #### Pneumonias
@@ -1346,35 +1169,15 @@ dados_SC_Pneumonias = FiltraDadosCID(dados_SC, c("J13","J14","J15","J17","J18"))
 dados_SE_Pneumonias = FiltraDadosCID(dados_SE, c("J13","J14","J15","J17","J18"))
 dados_SP_Pneumonias = FiltraDadosCID(dados_SP, c("J13","J14","J15","J17","J18"))
 dados_TO_Pneumonias = FiltraDadosCID(dados_TO, c("J13","J14","J15","J17","J18"))
-
-arrow::write_parquet(dados_AC_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_AC_Pneumonias.parquet')
-arrow::write_parquet(dados_AL_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_AL_Pneumonias.parquet')
-arrow::write_parquet(dados_AM_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_AM_Pneumonias.parquet')
-arrow::write_parquet(dados_AP_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_AP_Pneumonias.parquet')
-arrow::write_parquet(dados_BA_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_BA_Pneumonias.parquet')
-arrow::write_parquet(dados_CE_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_CE_Pneumonias.parquet')
-arrow::write_parquet(dados_DF_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_DF_Pneumonias.parquet')
-arrow::write_parquet(dados_ES_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_ES_Pneumonias.parquet')
-arrow::write_parquet(dados_GO_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_GO_Pneumonias.parquet')
-arrow::write_parquet(dados_MA_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_MA_Pneumonias.parquet')
-arrow::write_parquet(dados_MG_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_MG_Pneumonias.parquet')
-arrow::write_parquet(dados_MS_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_MS_Pneumonias.parquet')
-arrow::write_parquet(dados_MT_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_MT_Pneumonias.parquet')
-arrow::write_parquet(dados_PA_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_PA_Pneumonias.parquet')
-arrow::write_parquet(dados_PB_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_PB_Pneumonias.parquet')
-arrow::write_parquet(dados_PE_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_PE_Pneumonias.parquet')
-arrow::write_parquet(dados_PI_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_PI_Pneumonias.parquet')
-arrow::write_parquet(dados_PR_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_PR_Pneumonias.parquet')
-arrow::write_parquet(dados_RJ_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_RJ_Pneumonias.parquet')
-arrow::write_parquet(dados_RN_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_RN_Pneumonias.parquet')
-arrow::write_parquet(dados_RO_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_RO_Pneumonias.parquet')
-arrow::write_parquet(dados_RR_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_RR_Pneumonias.parquet')
-arrow::write_parquet(dados_RS_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_RS_Pneumonias.parquet')
-arrow::write_parquet(dados_SC_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_SC_Pneumonias.parquet')
-arrow::write_parquet(dados_SE_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_SE_Pneumonias.parquet')
-arrow::write_parquet(dados_SP_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_SP_Pneumonias.parquet')
-arrow::write_parquet(dados_TO_Pneumonias %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_TO_Pneumonias.parquet')
-
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Pneumonias")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Pneumonias/dados_", uf, "_Pneumonias.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Pneumonias")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_", uf, "_Pneumonias.parquet")) })
+}
 dados_Pneumonias = rbind(dados_AC_Pneumonias,dados_AL_Pneumonias,dados_AM_Pneumonias,dados_AP_Pneumonias,
                          dados_BA_Pneumonias,dados_CE_Pneumonias,dados_DF_Pneumonias,dados_ES_Pneumonias,
                          dados_GO_Pneumonias,dados_MA_Pneumonias,dados_MG_Pneumonias,dados_MS_Pneumonias,
@@ -1382,7 +1185,10 @@ dados_Pneumonias = rbind(dados_AC_Pneumonias,dados_AL_Pneumonias,dados_AM_Pneumo
                          dados_PI_Pneumonias,dados_PR_Pneumonias,dados_RJ_Pneumonias,dados_RN_Pneumonias,
                          dados_RO_Pneumonias,dados_RR_Pneumonias,dados_RS_Pneumonias,dados_SC_Pneumonias,
                          dados_SE_Pneumonias,dados_SP_Pneumonias,dados_TO_Pneumonias)
-arrow::write_parquet(dados_Pneumonias %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.parquet")
+tryCatch({arrow::write_parquet(dados_Pneumonias %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Pneumonias %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.parquet') })
+tryCatch({write.xlsx(dados_Pneumonias %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx")},
+         error = function(e) { write.xlsx(dados_Pneumonias %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx") })
 
 ####========================================================
 #### Úlcera gastrointestinal com hemorragia e/ou perfuração
@@ -1414,41 +1220,24 @@ dados_SC_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SC, c("K25","K26","K27","K28
 dados_SE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SE, c("K25","K26","K27","K28"))
 dados_SP_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SP, c("K25","K26","K27","K28"))
 dados_TO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_TO, c("K25","K26","K27","K28"))
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Ulc_Gastro_Hem_Perf")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_", uf, "_Ulc_Gastro_Hem_Perf.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Ulc_Gastro_Hem_Perf")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_", uf, "_Ulc_Gastro_Hem_Perf.parquet")) })
+}
+dados_Ulc_Gastro_Hem_Perf = rbind(dados_AC_Ulc_Gastro_Hem_Perf,dados_AL_Ulc_Gastro_Hem_Perf,dados_AM_Ulc_Gastro_Hem_Perf,dados_AP_Ulc_Gastro_Hem_Perf,
+                                  dados_BA_Ulc_Gastro_Hem_Perf,dados_CE_Ulc_Gastro_Hem_Perf,dados_DF_Ulc_Gastro_Hem_Perf,dados_ES_Ulc_Gastro_Hem_Perf,
+                                  dados_GO_Ulc_Gastro_Hem_Perf,dados_MA_Ulc_Gastro_Hem_Perf,dados_MG_Ulc_Gastro_Hem_Perf,dados_MS_Ulc_Gastro_Hem_Perf,
+                                  dados_MT_Ulc_Gastro_Hem_Perf,dados_PA_Ulc_Gastro_Hem_Perf,dados_PB_Ulc_Gastro_Hem_Perf,dados_PE_Ulc_Gastro_Hem_Perf,
+                                  dados_PI_Ulc_Gastro_Hem_Perf,dados_PR_Ulc_Gastro_Hem_Perf,dados_RJ_Ulc_Gastro_Hem_Perf,dados_RN_Ulc_Gastro_Hem_Perf,
+                                  dados_RO_Ulc_Gastro_Hem_Perf,dados_RR_Ulc_Gastro_Hem_Perf,dados_RS_Ulc_Gastro_Hem_Perf,dados_SC_Ulc_Gastro_Hem_Perf,
+                                  dados_SE_Ulc_Gastro_Hem_Perf,dados_SP_Ulc_Gastro_Hem_Perf,dados_TO_Ulc_Gastro_Hem_Perf)
+tryCatch({arrow::write_parquet(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.parquet') })
+tryCatch({write.xlsx(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx")},
+         error = function(e) { write.xlsx(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx") })
 
-arrow::write_parquet(dados_AC_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_AC_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_AL_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_AL_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_AM_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_AM_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_AP_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_AP_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_BA_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_BA_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_CE_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_CE_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_DF_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_DF_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_ES_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_ES_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_GO_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_GO_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_MA_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_MA_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_MG_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_MG_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_MS_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_MS_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_MT_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_MT_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_PA_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_PA_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_PB_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_PB_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_PE_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_PE_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_PI_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_PI_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_PR_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_PR_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_RJ_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_RJ_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_RN_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_RN_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_RO_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_RO_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_RR_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_RR_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_RS_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_RS_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_SC_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_SC_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_SE_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_SE_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_SP_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_SP_Ulc_Gastro_Hem_Perf.parquet')
-arrow::write_parquet(dados_TO_Ulc_Gastro_Hem_Perf %>% as.data.frame(),'D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_TO_Ulc_Gastro_Hem_Perf.parquet')
-
-dados_Ulc_Gastro_Hem_Perf = 
-  rbind(dados_AC_Ulc_Gastro_Hem_Perf,dados_AL_Ulc_Gastro_Hem_Perf,dados_AM_Ulc_Gastro_Hem_Perf,dados_AP_Ulc_Gastro_Hem_Perf,
-        dados_BA_Ulc_Gastro_Hem_Perf,dados_CE_Ulc_Gastro_Hem_Perf,dados_DF_Ulc_Gastro_Hem_Perf,dados_ES_Ulc_Gastro_Hem_Perf,
-        dados_GO_Ulc_Gastro_Hem_Perf,dados_MA_Ulc_Gastro_Hem_Perf,dados_MG_Ulc_Gastro_Hem_Perf,dados_MS_Ulc_Gastro_Hem_Perf,
-        dados_MT_Ulc_Gastro_Hem_Perf,dados_PA_Ulc_Gastro_Hem_Perf,dados_PB_Ulc_Gastro_Hem_Perf,dados_PE_Ulc_Gastro_Hem_Perf,
-        dados_PI_Ulc_Gastro_Hem_Perf,dados_PR_Ulc_Gastro_Hem_Perf,dados_RJ_Ulc_Gastro_Hem_Perf,dados_RN_Ulc_Gastro_Hem_Perf,
-        dados_RO_Ulc_Gastro_Hem_Perf,dados_RR_Ulc_Gastro_Hem_Perf,dados_RS_Ulc_Gastro_Hem_Perf,dados_SC_Ulc_Gastro_Hem_Perf,
-        dados_SE_Ulc_Gastro_Hem_Perf,dados_SP_Ulc_Gastro_Hem_Perf,dados_TO_Ulc_Gastro_Hem_Perf)
-arrow::write_parquet(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Úlcera_gastrointestinal_com_hemorragia_eou_perfuração.parquet")
