@@ -1188,3 +1188,74 @@ tryCatch({arrow::write_parquet(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "C
 tryCatch({write.xlsx(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx")},
          error = function(e) { write.xlsx(dados_Ulc_Gastro_Hem_Perf %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx") })
 
+####===============================
+#### Carregando os bancos de dados 
+####===============================
+dados_Anemia = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Anemia/dados_Anemia.xlsx")},
+                        error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Anemia/dados_Anemia.xlsx") })
+dados_Angina = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Angina/dados_Angina.xlsx")},
+                        error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Angina/dados_Angina.xlsx") })
+dados_Asma = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx")},
+                      error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx") })
+dados_Def_nut = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.xlsx")},
+                         error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.xlsx") })
+dados_Diabetes = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.xlsx")},
+                          error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.xlsx") })
+dados_D_Inf_Org_Pelv_Fem = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx")},
+                                    error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx") })
+dados_D_Pulm_Obs_Cron = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx")},
+                                 error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx") })
+dados_D_Cerebrovasc = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx")},
+                               error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx") })
+dados_D_P_Imu_Cond_Evit = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx")},
+                                   error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx") })
+dados_D_Rel_PreNat_Parto = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx")},
+                                    error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx") })
+dados_Epilepsias = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.xlsx")},
+                            error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.xlsx") })
+dados_Gastro_Inf_Comp = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.xlsx")},
+                                 error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Gastroenterites Infecciosas e complicações/dados_Gastro_Inf_Comp.xlsx") })
+dados_Hipertensao = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.xlsx")},
+                             error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Hipertensão/dados_Hipertensao.xlsx") })
+dados_Inf_Pele_Tec_Sub = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.xlsx")},
+                                  error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção da pele e tecido subcutâneo/dados_Inf_Pele_Tec_Sub.xlsx") })
+dados_Inf_Rim_Tr_Urin = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.xlsx")},
+                                 error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecção no Rim e no Trato Urinário/dados_Inf_Rim_Tr_Urin.xlsx") })
+dados_Inf_Ouv_Nariz_Garg = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.xlsx")},
+                                    error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.xlsx") })
+dados_Insuf_Card = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx")},
+                            error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx") })
+dados_Neo_Maligna_Utero = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx")},
+                                   error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx") })
+dados_Pneumonias = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx")},
+                            error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx") })
+dados_Ulc_Gastro_Hem_Perf = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx")},
+                                     error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx") })
+
+####==================
+#### Junção dos dados
+####==================
+dados_icsap = rbind(dados_Anemia %>% mutate(CID_ICSAP = 'Anemia'),
+                    dados_Asma %>% mutate(CID_ICSAP = 'Asma'),
+                    dados_Angina %>% mutate(CID_ICSAP = 'Angina'),
+                    dados_Def_nut %>% mutate(CID_ICSAP = 'Deficiências nutricionais'),
+                    dados_Diabetes %>% mutate(CID_ICSAP = 'Diabetes'),
+                    dados_D_Inf_Org_Pelv_Fem %>% mutate(CID_ICSAP = 'Doença Inflamatória órgãos pélvicos femininos'),
+                    dados_D_Pulm_Obs_Cron %>% mutate(CID_ICSAP = 'Doença Pulmonar obstrutiva crônica'),
+                    dados_D_Cerebrovasc %>% mutate(CID_ICSAP = 'Doenças Cerebro-vasculares'),
+                    dados_D_P_Imu_Cond_Evit %>% mutate(CID_ICSAP = 'Doenças preveníveis por imunização e condições evitáveis'),
+                    dados_D_Rel_PreNat_Parto %>% mutate(CID_ICSAP = 'Doenças relacionadas ao Pré-Natal e Parto'),
+                    dados_Epilepsias %>% mutate(CID_ICSAP = 'Epilepsias'),
+                    dados_Gastro_Inf_Comp %>% mutate(CID_ICSAP = 'Gastroenterites Infecciosas e complicações'),
+                    dados_Hipertensao %>% mutate(CID_ICSAP = 'Hipertensão'),
+                    dados_Inf_Pele_Tec_Sub %>% mutate(CID_ICSAP = 'Infecção da pele e tecido subcutâneo'),
+                    dados_Inf_Rim_Tr_Urin %>% mutate(CID_ICSAP = 'Infecção no Rim e no Trato Urinário'),
+                    dados_Inf_Ouv_Nariz_Garg %>% mutate(CID_ICSAP = 'Infecções de ouvido, nariz e garganta'),
+                    dados_Insuf_Card %>% mutate(CID_ICSAP = 'Insuficiência Cardíaca'),
+                    dados_Neo_Maligna_Utero %>% mutate(CID_ICSAP = 'Neoplasia maligna do útero'),
+                    dados_Pneumonias %>% mutate(CID_ICSAP = 'Pneumonias'),
+                    dados_Ulc_Gastro_Hem_Perf %>% mutate(CID_ICSAP = 'Úlcera gastrointestinal com hemorragia eou perfuração'))
+write.xlsx(dados_icsap %>% as.data.frame(),'dados_icsap.xlsx')
+arrow::write_parquet(dados_icsap %>% as.data.frame(), "dados_icsap.parquet")
+
+dados_icsap %>% head
