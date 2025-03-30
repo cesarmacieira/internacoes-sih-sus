@@ -1257,5 +1257,3 @@ dados_icsap = rbind(dados_Anemia %>% mutate(CID_ICSAP = 'Anemia'),
                     dados_Ulc_Gastro_Hem_Perf %>% mutate(CID_ICSAP = 'Úlcera gastrointestinal com hemorragia eou perfuração'))
 write.xlsx(dados_icsap %>% as.data.frame(),'dados_icsap.xlsx')
 arrow::write_parquet(dados_icsap %>% as.data.frame(), "dados_icsap.parquet")
-
-dados_icsap %>% head
