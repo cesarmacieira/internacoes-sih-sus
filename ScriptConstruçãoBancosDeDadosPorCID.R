@@ -315,36 +315,87 @@ tryCatch({arrow::write_parquet(dados_Asma %>% as.data.frame(), "C:/Users/cesar_m
 tryCatch({write.xlsx(dados_Asma %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx")},
          error = function(e) { write.xlsx(dados_Asma %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx") })
 
+####=====================
+#### Condições evitáveis
+####=====================
+dados_AC_Condicoes_Evitaveis = FiltraDadosCID(dados_AC, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_AL_Condicoes_Evitaveis = FiltraDadosCID(dados_AL, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_AM_Condicoes_Evitaveis = FiltraDadosCID(dados_AM, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_AP_Condicoes_Evitaveis = FiltraDadosCID(dados_AP, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_BA_Condicoes_Evitaveis = FiltraDadosCID(dados_BA, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_CE_Condicoes_Evitaveis = FiltraDadosCID(dados_CE, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_DF_Condicoes_Evitaveis = FiltraDadosCID(dados_DF, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_ES_Condicoes_Evitaveis = FiltraDadosCID(dados_ES, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_GO_Condicoes_Evitaveis = FiltraDadosCID(dados_GO, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_MA_Condicoes_Evitaveis = FiltraDadosCID(dados_MA, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_MG_Condicoes_Evitaveis = FiltraDadosCID(dados_MG, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_MS_Condicoes_Evitaveis = FiltraDadosCID(dados_MS, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_MT_Condicoes_Evitaveis = FiltraDadosCID(dados_MT, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_PA_Condicoes_Evitaveis = FiltraDadosCID(dados_PA, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_PB_Condicoes_Evitaveis = FiltraDadosCID(dados_PB, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_PE_Condicoes_Evitaveis = FiltraDadosCID(dados_PE, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_PI_Condicoes_Evitaveis = FiltraDadosCID(dados_PI, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_PR_Condicoes_Evitaveis = FiltraDadosCID(dados_PR, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_RJ_Condicoes_Evitaveis = FiltraDadosCID(dados_RJ, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_RN_Condicoes_Evitaveis = FiltraDadosCID(dados_RN, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_RO_Condicoes_Evitaveis = FiltraDadosCID(dados_RO, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_RR_Condicoes_Evitaveis = FiltraDadosCID(dados_RR, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_RS_Condicoes_Evitaveis = FiltraDadosCID(dados_RS, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_SC_Condicoes_Evitaveis = FiltraDadosCID(dados_SC, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_SE_Condicoes_Evitaveis = FiltraDadosCID(dados_SE, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_SP_Condicoes_Evitaveis = FiltraDadosCID(dados_SP, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+dados_TO_Condicoes_Evitaveis = FiltraDadosCID(dados_TO, c("I00", "I01", "I02", "A51", "A52", "A53", "A15", "A16", "A17", "A15", "A16"))
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_Condicoes_Evitaveis")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_", uf, "_Condicoes_Evitaveis.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_Condicoes_Evitaveis")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_", uf, "_Condicoes_Evitaveis.parquet")) })
+}
+dados_Condicoes_Evitaveis = rbind(dados_AC_Condicoes_Evitaveis,dados_AL_Condicoes_Evitaveis,dados_AM_Condicoes_Evitaveis,dados_AP_Condicoes_Evitaveis,
+                                dados_BA_Condicoes_Evitaveis,dados_CE_Condicoes_Evitaveis,dados_DF_Condicoes_Evitaveis,dados_ES_Condicoes_Evitaveis,
+                                dados_GO_Condicoes_Evitaveis,dados_MA_Condicoes_Evitaveis,dados_MG_Condicoes_Evitaveis,dados_MS_Condicoes_Evitaveis,
+                                dados_MT_Condicoes_Evitaveis,dados_PA_Condicoes_Evitaveis,dados_PB_Condicoes_Evitaveis,dados_PE_Condicoes_Evitaveis,
+                                dados_PI_Condicoes_Evitaveis,dados_PR_Condicoes_Evitaveis,dados_RJ_Condicoes_Evitaveis,dados_RN_Condicoes_Evitaveis,
+                                dados_RO_Condicoes_Evitaveis,dados_RR_Condicoes_Evitaveis,dados_RS_Condicoes_Evitaveis,dados_SC_Condicoes_Evitaveis,
+                                dados_SE_Condicoes_Evitaveis,dados_SP_Condicoes_Evitaveis,dados_TO_Condicoes_Evitaveis)
+tryCatch({arrow::write_parquet(dados_Condicoes_Evitaveis %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.parquet")},
+         error = function(e) { arrow::write_parquet(dados_Condicoes_Evitaveis %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.parquet') })
+tryCatch({write.xlsx(dados_Condicoes_Evitaveis %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.xlsx")},
+         error = function(e) { write.xlsx(dados_Condicoes_Evitaveis %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.xlsx") })
+
 ####===========================
 #### Deficiências nutricionais
 ####===========================
-dados_AC_Def_nut = FiltraDadosCID(dados_AC, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_AL_Def_nut = FiltraDadosCID(dados_AL, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_AM_Def_nut = FiltraDadosCID(dados_AM, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_AP_Def_nut = FiltraDadosCID(dados_AP, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_BA_Def_nut = FiltraDadosCID(dados_BA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_CE_Def_nut = FiltraDadosCID(dados_CE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_DF_Def_nut = FiltraDadosCID(dados_DF, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_ES_Def_nut = FiltraDadosCID(dados_ES, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_GO_Def_nut = FiltraDadosCID(dados_GO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_MA_Def_nut = FiltraDadosCID(dados_MA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_MG_Def_nut = FiltraDadosCID(dados_MG, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_MS_Def_nut = FiltraDadosCID(dados_MS, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_MT_Def_nut = FiltraDadosCID(dados_MT, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_PA_Def_nut = FiltraDadosCID(dados_PA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_PB_Def_nut = FiltraDadosCID(dados_PB, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_PE_Def_nut = FiltraDadosCID(dados_PE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_PI_Def_nut = FiltraDadosCID(dados_PI, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_PR_Def_nut = FiltraDadosCID(dados_PR, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_RJ_Def_nut = FiltraDadosCID(dados_RJ, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_RN_Def_nut = FiltraDadosCID(dados_RN, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_RO_Def_nut = FiltraDadosCID(dados_RO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_RR_Def_nut = FiltraDadosCID(dados_RR, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_RS_Def_nut = FiltraDadosCID(dados_RS, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_SC_Def_nut = FiltraDadosCID(dados_SC, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_SE_Def_nut = FiltraDadosCID(dados_SE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_SP_Def_nut = FiltraDadosCID(dados_SP, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
-dados_TO_Def_nut = FiltraDadosCID(dados_TO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E63","E64"))
+dados_AC_Def_nut = FiltraDadosCID(dados_AC, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_AL_Def_nut = FiltraDadosCID(dados_AL, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_AM_Def_nut = FiltraDadosCID(dados_AM, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_AP_Def_nut = FiltraDadosCID(dados_AP, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_BA_Def_nut = FiltraDadosCID(dados_BA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_CE_Def_nut = FiltraDadosCID(dados_CE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_DF_Def_nut = FiltraDadosCID(dados_DF, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_ES_Def_nut = FiltraDadosCID(dados_ES, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_GO_Def_nut = FiltraDadosCID(dados_GO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_MA_Def_nut = FiltraDadosCID(dados_MA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_MG_Def_nut = FiltraDadosCID(dados_MG, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_MS_Def_nut = FiltraDadosCID(dados_MS, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_MT_Def_nut = FiltraDadosCID(dados_MT, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_PA_Def_nut = FiltraDadosCID(dados_PA, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_PB_Def_nut = FiltraDadosCID(dados_PB, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_PE_Def_nut = FiltraDadosCID(dados_PE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_PI_Def_nut = FiltraDadosCID(dados_PI, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_PR_Def_nut = FiltraDadosCID(dados_PR, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_RJ_Def_nut = FiltraDadosCID(dados_RJ, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_RN_Def_nut = FiltraDadosCID(dados_RN, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_RO_Def_nut = FiltraDadosCID(dados_RO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_RR_Def_nut = FiltraDadosCID(dados_RR, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_RS_Def_nut = FiltraDadosCID(dados_RS, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_SC_Def_nut = FiltraDadosCID(dados_SC, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_SE_Def_nut = FiltraDadosCID(dados_SE, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_SP_Def_nut = FiltraDadosCID(dados_SP, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
+dados_TO_Def_nut = FiltraDadosCID(dados_TO, c("E40","E41","E42","E43","E44","E45","E46","E50","E51","E52","E53","E54","E55","E56","E58","E59","E60","E61","E62","E63","E64"))
 
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 
@@ -372,33 +423,33 @@ tryCatch({write.xlsx(dados_Def_nut %>% as.data.frame(), "C:/Users/cesar_macieira
 ####==========
 #### Diabetes
 ####==========
-dados_AC_Diabetes = FiltraDadosCID(dados_AC, c("E10","E11","E12","E13","E14"))
-dados_AL_Diabetes = FiltraDadosCID(dados_AL, c("E10","E11","E12","E13","E14"))
-dados_AM_Diabetes = FiltraDadosCID(dados_AM, c("E10","E11","E12","E13","E14"))
-dados_AP_Diabetes = FiltraDadosCID(dados_AP, c("E10","E11","E12","E13","E14"))
-dados_BA_Diabetes = FiltraDadosCID(dados_BA, c("E10","E11","E12","E13","E14"))
-dados_CE_Diabetes = FiltraDadosCID(dados_CE, c("E10","E11","E12","E13","E14"))
-dados_DF_Diabetes = FiltraDadosCID(dados_DF, c("E10","E11","E12","E13","E14"))
-dados_ES_Diabetes = FiltraDadosCID(dados_ES, c("E10","E11","E12","E13","E14"))
-dados_GO_Diabetes = FiltraDadosCID(dados_GO, c("E10","E11","E12","E13","E14"))
-dados_MA_Diabetes = FiltraDadosCID(dados_MA, c("E10","E11","E12","E13","E14"))
-dados_MG_Diabetes = FiltraDadosCID(dados_MG, c("E10","E11","E12","E13","E14"))
-dados_MS_Diabetes = FiltraDadosCID(dados_MS, c("E10","E11","E12","E13","E14"))
-dados_MT_Diabetes = FiltraDadosCID(dados_MT, c("E10","E11","E12","E13","E14"))
-dados_PA_Diabetes = FiltraDadosCID(dados_PA, c("E10","E11","E12","E13","E14"))
-dados_PB_Diabetes = FiltraDadosCID(dados_PB, c("E10","E11","E12","E13","E14"))
-dados_PE_Diabetes = FiltraDadosCID(dados_PE, c("E10","E11","E12","E13","E14"))
-dados_PI_Diabetes = FiltraDadosCID(dados_PI, c("E10","E11","E12","E13","E14"))
-dados_PR_Diabetes = FiltraDadosCID(dados_PR, c("E10","E11","E12","E13","E14"))
-dados_RJ_Diabetes = FiltraDadosCID(dados_RJ, c("E10","E11","E12","E13","E14"))
-dados_RN_Diabetes = FiltraDadosCID(dados_RN, c("E10","E11","E12","E13","E14"))
-dados_RO_Diabetes = FiltraDadosCID(dados_RO, c("E10","E11","E12","E13","E14"))
-dados_RR_Diabetes = FiltraDadosCID(dados_RR, c("E10","E11","E12","E13","E14"))
-dados_RS_Diabetes = FiltraDadosCID(dados_RS, c("E10","E11","E12","E13","E14"))
-dados_SC_Diabetes = FiltraDadosCID(dados_SC, c("E10","E11","E12","E13","E14"))
-dados_SE_Diabetes = FiltraDadosCID(dados_SE, c("E10","E11","E12","E13","E14"))
-dados_SP_Diabetes = FiltraDadosCID(dados_SP, c("E10","E11","E12","E13","E14"))
-dados_TO_Diabetes = FiltraDadosCID(dados_TO, c("E10","E11","E12","E13","E14"))
+dados_AC_Diabetes = FiltraDadosCID(dados_AC, c("E10"))
+dados_AL_Diabetes = FiltraDadosCID(dados_AL, c("E10"))
+dados_AM_Diabetes = FiltraDadosCID(dados_AM, c("E10"))
+dados_AP_Diabetes = FiltraDadosCID(dados_AP, c("E10"))
+dados_BA_Diabetes = FiltraDadosCID(dados_BA, c("E10"))
+dados_CE_Diabetes = FiltraDadosCID(dados_CE, c("E10"))
+dados_DF_Diabetes = FiltraDadosCID(dados_DF, c("E10"))
+dados_ES_Diabetes = FiltraDadosCID(dados_ES, c("E10"))
+dados_GO_Diabetes = FiltraDadosCID(dados_GO, c("E10"))
+dados_MA_Diabetes = FiltraDadosCID(dados_MA, c("E10"))
+dados_MG_Diabetes = FiltraDadosCID(dados_MG, c("E10"))
+dados_MS_Diabetes = FiltraDadosCID(dados_MS, c("E10"))
+dados_MT_Diabetes = FiltraDadosCID(dados_MT, c("E10"))
+dados_PA_Diabetes = FiltraDadosCID(dados_PA, c("E10"))
+dados_PB_Diabetes = FiltraDadosCID(dados_PB, c("E10"))
+dados_PE_Diabetes = FiltraDadosCID(dados_PE, c("E10"))
+dados_PI_Diabetes = FiltraDadosCID(dados_PI, c("E10"))
+dados_PR_Diabetes = FiltraDadosCID(dados_PR, c("E10"))
+dados_RJ_Diabetes = FiltraDadosCID(dados_RJ, c("E10"))
+dados_RN_Diabetes = FiltraDadosCID(dados_RN, c("E10"))
+dados_RO_Diabetes = FiltraDadosCID(dados_RO, c("E10"))
+dados_RR_Diabetes = FiltraDadosCID(dados_RR, c("E10"))
+dados_RS_Diabetes = FiltraDadosCID(dados_RS, c("E10"))
+dados_SC_Diabetes = FiltraDadosCID(dados_SC, c("E10"))
+dados_SE_Diabetes = FiltraDadosCID(dados_SE, c("E10"))
+dados_SP_Diabetes = FiltraDadosCID(dados_SP, c("E10"))
+dados_TO_Diabetes = FiltraDadosCID(dados_TO, c("E10"))
 
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 
@@ -474,87 +525,36 @@ tryCatch({arrow::write_parquet(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "C:
 tryCatch({write.xlsx(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx")},
          error = function(e) { write.xlsx(dados_D_Inf_Org_Pelv_Fem %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx") })
 
-####====================================
-#### Doença Pulmonar obstrutiva crônica
-####====================================
-dados_AC_D_Pulm_Obs_Cron = FiltraDadosCID(dados_AC, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_AL_D_Pulm_Obs_Cron = FiltraDadosCID(dados_AL, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_AM_D_Pulm_Obs_Cron = FiltraDadosCID(dados_AM, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_AP_D_Pulm_Obs_Cron = FiltraDadosCID(dados_AP, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_BA_D_Pulm_Obs_Cron = FiltraDadosCID(dados_BA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_CE_D_Pulm_Obs_Cron = FiltraDadosCID(dados_CE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_DF_D_Pulm_Obs_Cron = FiltraDadosCID(dados_DF, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_ES_D_Pulm_Obs_Cron = FiltraDadosCID(dados_ES, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_GO_D_Pulm_Obs_Cron = FiltraDadosCID(dados_GO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_MA_D_Pulm_Obs_Cron = FiltraDadosCID(dados_MA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_MG_D_Pulm_Obs_Cron = FiltraDadosCID(dados_MG, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_MS_D_Pulm_Obs_Cron = FiltraDadosCID(dados_MS, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_MT_D_Pulm_Obs_Cron = FiltraDadosCID(dados_MT, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_PA_D_Pulm_Obs_Cron = FiltraDadosCID(dados_PA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_PB_D_Pulm_Obs_Cron = FiltraDadosCID(dados_PB, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_PE_D_Pulm_Obs_Cron = FiltraDadosCID(dados_PE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_PI_D_Pulm_Obs_Cron = FiltraDadosCID(dados_PI, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_PR_D_Pulm_Obs_Cron = FiltraDadosCID(dados_PR, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_RJ_D_Pulm_Obs_Cron = FiltraDadosCID(dados_RJ, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_RN_D_Pulm_Obs_Cron = FiltraDadosCID(dados_RN, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_RO_D_Pulm_Obs_Cron = FiltraDadosCID(dados_RO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_RR_D_Pulm_Obs_Cron = FiltraDadosCID(dados_RR, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_RS_D_Pulm_Obs_Cron = FiltraDadosCID(dados_RS, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_SC_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SC, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_SE_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_SP_D_Pulm_Obs_Cron = FiltraDadosCID(dados_SP, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-dados_TO_D_Pulm_Obs_Cron = FiltraDadosCID(dados_TO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
-estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
-for (uf in estados) {
-  tryCatch({arrow::write_parquet(
-    get(paste0("dados_", uf, "_D_Pulm_Obs_Cron")) %>% as.data.frame(),
-    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_", uf, "_D_Pulm_Obs_Cron.parquet"))},
-    error = function(e) { arrow::write_parquet(
-      get(paste0("dados_", uf, "_D_Pulm_Obs_Cron")) %>% as.data.frame(),
-      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_", uf, "_D_Pulm_Obs_Cron.parquet")) })
-}
-dados_D_Pulm_Obs_Cron = rbind(dados_AC_D_Pulm_Obs_Cron,dados_AL_D_Pulm_Obs_Cron,dados_AM_D_Pulm_Obs_Cron,dados_AP_D_Pulm_Obs_Cron,
-                            dados_BA_D_Pulm_Obs_Cron,dados_CE_D_Pulm_Obs_Cron,dados_DF_D_Pulm_Obs_Cron,dados_ES_D_Pulm_Obs_Cron,
-                            dados_GO_D_Pulm_Obs_Cron,dados_MA_D_Pulm_Obs_Cron,dados_MG_D_Pulm_Obs_Cron,dados_MS_D_Pulm_Obs_Cron,
-                            dados_MT_D_Pulm_Obs_Cron,dados_PA_D_Pulm_Obs_Cron,dados_PB_D_Pulm_Obs_Cron,dados_PE_D_Pulm_Obs_Cron,
-                            dados_PI_D_Pulm_Obs_Cron,dados_PR_D_Pulm_Obs_Cron,dados_RJ_D_Pulm_Obs_Cron,dados_RN_D_Pulm_Obs_Cron,
-                            dados_RO_D_Pulm_Obs_Cron,dados_RR_D_Pulm_Obs_Cron,dados_RS_D_Pulm_Obs_Cron,dados_SC_D_Pulm_Obs_Cron,
-                            dados_SE_D_Pulm_Obs_Cron,dados_SP_D_Pulm_Obs_Cron,dados_TO_D_Pulm_Obs_Cron)
-tryCatch({arrow::write_parquet(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.parquet")},
-         error = function(e) { arrow::write_parquet(dados_D_Pulm_Obs_Cron %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.parquet') })
-tryCatch({write.xlsx(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx")},
-         error = function(e) { write.xlsx(dados_D_Pulm_Obs_Cron %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx") })
-
 ####============================
 #### Doenças Cerebro-vasculares
 ####============================
-dados_AC_D_Cerebrovasc = FiltraDadosCID(dados_AC, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_AL_D_Cerebrovasc = FiltraDadosCID(dados_AL, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_AM_D_Cerebrovasc = FiltraDadosCID(dados_AM, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_AP_D_Cerebrovasc = FiltraDadosCID(dados_AP, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_BA_D_Cerebrovasc = FiltraDadosCID(dados_BA, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_CE_D_Cerebrovasc = FiltraDadosCID(dados_CE, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_DF_D_Cerebrovasc = FiltraDadosCID(dados_DF, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_ES_D_Cerebrovasc = FiltraDadosCID(dados_ES, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_GO_D_Cerebrovasc = FiltraDadosCID(dados_GO, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_MA_D_Cerebrovasc = FiltraDadosCID(dados_MA, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_MG_D_Cerebrovasc = FiltraDadosCID(dados_MG, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_MS_D_Cerebrovasc = FiltraDadosCID(dados_MS, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_MT_D_Cerebrovasc = FiltraDadosCID(dados_MT, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_PA_D_Cerebrovasc = FiltraDadosCID(dados_PA, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_PB_D_Cerebrovasc = FiltraDadosCID(dados_PB, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_PE_D_Cerebrovasc = FiltraDadosCID(dados_PE, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_PI_D_Cerebrovasc = FiltraDadosCID(dados_PI, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_PR_D_Cerebrovasc = FiltraDadosCID(dados_PR, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_RJ_D_Cerebrovasc = FiltraDadosCID(dados_RJ, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_RN_D_Cerebrovasc = FiltraDadosCID(dados_RN, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_RO_D_Cerebrovasc = FiltraDadosCID(dados_RO, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_RR_D_Cerebrovasc = FiltraDadosCID(dados_RR, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_RS_D_Cerebrovasc = FiltraDadosCID(dados_RS, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_SC_D_Cerebrovasc = FiltraDadosCID(dados_SC, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_SE_D_Cerebrovasc = FiltraDadosCID(dados_SE, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_SP_D_Cerebrovasc = FiltraDadosCID(dados_SP, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
-dados_TO_D_Cerebrovasc = FiltraDadosCID(dados_TO, c("I60","I61","I62","I63","I64","I65","I66","I67","I68","I69"))
+dados_AC_D_Cerebrovasc = FiltraDadosCID(dados_AC, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_AL_D_Cerebrovasc = FiltraDadosCID(dados_AL, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_AM_D_Cerebrovasc = FiltraDadosCID(dados_AM, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_AP_D_Cerebrovasc = FiltraDadosCID(dados_AP, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_BA_D_Cerebrovasc = FiltraDadosCID(dados_BA, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_CE_D_Cerebrovasc = FiltraDadosCID(dados_CE, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_DF_D_Cerebrovasc = FiltraDadosCID(dados_DF, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_ES_D_Cerebrovasc = FiltraDadosCID(dados_ES, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_GO_D_Cerebrovasc = FiltraDadosCID(dados_GO, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_MA_D_Cerebrovasc = FiltraDadosCID(dados_MA, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_MG_D_Cerebrovasc = FiltraDadosCID(dados_MG, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_MS_D_Cerebrovasc = FiltraDadosCID(dados_MS, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_MT_D_Cerebrovasc = FiltraDadosCID(dados_MT, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_PA_D_Cerebrovasc = FiltraDadosCID(dados_PA, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_PB_D_Cerebrovasc = FiltraDadosCID(dados_PB, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_PE_D_Cerebrovasc = FiltraDadosCID(dados_PE, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_PI_D_Cerebrovasc = FiltraDadosCID(dados_PI, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_PR_D_Cerebrovasc = FiltraDadosCID(dados_PR, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_RJ_D_Cerebrovasc = FiltraDadosCID(dados_RJ, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_RN_D_Cerebrovasc = FiltraDadosCID(dados_RN, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_RO_D_Cerebrovasc = FiltraDadosCID(dados_RO, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_RR_D_Cerebrovasc = FiltraDadosCID(dados_RR, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_RS_D_Cerebrovasc = FiltraDadosCID(dados_RS, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_SC_D_Cerebrovasc = FiltraDadosCID(dados_SC, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_SE_D_Cerebrovasc = FiltraDadosCID(dados_SE, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_SP_D_Cerebrovasc = FiltraDadosCID(dados_SP, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
+dados_TO_D_Cerebrovasc = FiltraDadosCID(dados_TO, c("G45", "G46", "I63", "I64", "I65", "I66", "I67", "I69"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -565,98 +565,149 @@ for (uf in estados) {
       paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_", uf, "_D_Cerebrovasc.parquet")) })
 }
 dados_D_Cerebrovasc = rbind(dados_AC_D_Cerebrovasc,dados_AL_D_Cerebrovasc,dados_AM_D_Cerebrovasc,dados_AP_D_Cerebrovasc,
-                                dados_BA_D_Cerebrovasc,dados_CE_D_Cerebrovasc,dados_DF_D_Cerebrovasc,dados_ES_D_Cerebrovasc,
-                                dados_GO_D_Cerebrovasc,dados_MA_D_Cerebrovasc,dados_MG_D_Cerebrovasc,dados_MS_D_Cerebrovasc,
-                                dados_MT_D_Cerebrovasc,dados_PA_D_Cerebrovasc,dados_PB_D_Cerebrovasc,dados_PE_D_Cerebrovasc,
-                                dados_PI_D_Cerebrovasc,dados_PR_D_Cerebrovasc,dados_RJ_D_Cerebrovasc,dados_RN_D_Cerebrovasc,
-                                dados_RO_D_Cerebrovasc,dados_RR_D_Cerebrovasc,dados_RS_D_Cerebrovasc,dados_SC_D_Cerebrovasc,
-                                dados_SE_D_Cerebrovasc,dados_SP_D_Cerebrovasc,dados_TO_D_Cerebrovasc)
+                            dados_BA_D_Cerebrovasc,dados_CE_D_Cerebrovasc,dados_DF_D_Cerebrovasc,dados_ES_D_Cerebrovasc,
+                            dados_GO_D_Cerebrovasc,dados_MA_D_Cerebrovasc,dados_MG_D_Cerebrovasc,dados_MS_D_Cerebrovasc,
+                            dados_MT_D_Cerebrovasc,dados_PA_D_Cerebrovasc,dados_PB_D_Cerebrovasc,dados_PE_D_Cerebrovasc,
+                            dados_PI_D_Cerebrovasc,dados_PR_D_Cerebrovasc,dados_RJ_D_Cerebrovasc,dados_RN_D_Cerebrovasc,
+                            dados_RO_D_Cerebrovasc,dados_RR_D_Cerebrovasc,dados_RS_D_Cerebrovasc,dados_SC_D_Cerebrovasc,
+                            dados_SE_D_Cerebrovasc,dados_SP_D_Cerebrovasc,dados_TO_D_Cerebrovasc)
 tryCatch({arrow::write_parquet(dados_D_Cerebrovasc %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.parquet")},
          error = function(e) { arrow::write_parquet(dados_D_Cerebrovasc %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.parquet') })
 tryCatch({write.xlsx(dados_D_Cerebrovasc %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx")},
          error = function(e) { write.xlsx(dados_D_Cerebrovasc %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx") })
 
-####==========================================================
-#### Doenças preveníveis por imunização e condições evitáveis
-####==========================================================
-dados_AC_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_AC, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_AL_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_AL, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_AM_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_AM, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_AP_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_AP, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_BA_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_BA, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_CE_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_CE, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_DF_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_DF, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_ES_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_ES, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_GO_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_GO, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_MA_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_MA, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_MG_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_MG, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_MS_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_MS, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_MT_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_MT, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_PA_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_PA, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_PB_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_PB, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_PE_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_PE, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_PI_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_PI, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_PR_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_PR, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_RJ_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_RJ, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_RN_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_RN, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_RO_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_RO, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_RR_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_RR, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_RS_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_RS, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_SC_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SC, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_SE_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SE, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_SP_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_SP, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
-dados_TO_D_P_Imu_Cond_Evit = FiltraDadosCID(dados_TO, c("A15","A16","A17","A18","A19","A33","A34","A35","A36","A37","A50","A51","A52","A53","A95","B05","B16","B50","B51","B52","B53","B54","B77","G00"))
+####====================================
+#### Doenças das vias aéreas inferiores
+####====================================
+dados_AC_D_Vias_Aereas_Inf = FiltraDadosCID(dados_AC, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_AL_D_Vias_Aereas_Inf = FiltraDadosCID(dados_AL, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_AM_D_Vias_Aereas_Inf = FiltraDadosCID(dados_AM, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_AP_D_Vias_Aereas_Inf = FiltraDadosCID(dados_AP, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_BA_D_Vias_Aereas_Inf = FiltraDadosCID(dados_BA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_CE_D_Vias_Aereas_Inf = FiltraDadosCID(dados_CE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_DF_D_Vias_Aereas_Inf = FiltraDadosCID(dados_DF, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_ES_D_Vias_Aereas_Inf = FiltraDadosCID(dados_ES, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_GO_D_Vias_Aereas_Inf = FiltraDadosCID(dados_GO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_MA_D_Vias_Aereas_Inf = FiltraDadosCID(dados_MA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_MG_D_Vias_Aereas_Inf = FiltraDadosCID(dados_MG, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_MS_D_Vias_Aereas_Inf = FiltraDadosCID(dados_MS, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_MT_D_Vias_Aereas_Inf = FiltraDadosCID(dados_MT, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_PA_D_Vias_Aereas_Inf = FiltraDadosCID(dados_PA, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_PB_D_Vias_Aereas_Inf = FiltraDadosCID(dados_PB, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_PE_D_Vias_Aereas_Inf = FiltraDadosCID(dados_PE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_PI_D_Vias_Aereas_Inf = FiltraDadosCID(dados_PI, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_PR_D_Vias_Aereas_Inf = FiltraDadosCID(dados_PR, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_RJ_D_Vias_Aereas_Inf = FiltraDadosCID(dados_RJ, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_RN_D_Vias_Aereas_Inf = FiltraDadosCID(dados_RN, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_RO_D_Vias_Aereas_Inf = FiltraDadosCID(dados_RO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_RR_D_Vias_Aereas_Inf = FiltraDadosCID(dados_RR, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_RS_D_Vias_Aereas_Inf = FiltraDadosCID(dados_RS, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_SC_D_Vias_Aereas_Inf = FiltraDadosCID(dados_SC, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_SE_D_Vias_Aereas_Inf = FiltraDadosCID(dados_SE, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_SP_D_Vias_Aereas_Inf = FiltraDadosCID(dados_SP, c("J20","J21","J40","J41","J42","J43","J44","J47"))
+dados_TO_D_Vias_Aereas_Inf = FiltraDadosCID(dados_TO, c("J20","J21","J40","J41","J42","J43","J44","J47"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
-    get(paste0("dados_", uf, "_D_P_Imu_Cond_Evit")) %>% as.data.frame(),
-    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_", uf, "_D_P_Imu_Cond_Evit.parquet"))},
+    get(paste0("dados_", uf, "_D_Vias_Aereas_Inf")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_", uf, "_D_Vias_Aereas_Inf.parquet"))},
     error = function(e) { arrow::write_parquet(
-      get(paste0("dados_", uf, "_D_P_Imu_Cond_Evit")) %>% as.data.frame(),
-      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_", uf, "_D_P_Imu_Cond_Evit.parquet")) })
+      get(paste0("dados_", uf, "_D_Vias_Aereas_Inf")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_", uf, "_D_Vias_Aereas_Inf.parquet")) })
 }
-dados_D_P_Imu_Cond_Evit = rbind(dados_AC_D_P_Imu_Cond_Evit,dados_AL_D_P_Imu_Cond_Evit,dados_AM_D_P_Imu_Cond_Evit,dados_AP_D_P_Imu_Cond_Evit,
-                                 dados_BA_D_P_Imu_Cond_Evit,dados_CE_D_P_Imu_Cond_Evit,dados_DF_D_P_Imu_Cond_Evit,dados_ES_D_P_Imu_Cond_Evit,
-                                 dados_GO_D_P_Imu_Cond_Evit,dados_MA_D_P_Imu_Cond_Evit,dados_MG_D_P_Imu_Cond_Evit,dados_MS_D_P_Imu_Cond_Evit,
-                                 dados_MT_D_P_Imu_Cond_Evit,dados_PA_D_P_Imu_Cond_Evit,dados_PB_D_P_Imu_Cond_Evit,dados_PE_D_P_Imu_Cond_Evit,
-                                 dados_PI_D_P_Imu_Cond_Evit,dados_PR_D_P_Imu_Cond_Evit,dados_RJ_D_P_Imu_Cond_Evit,dados_RN_D_P_Imu_Cond_Evit,
-                                 dados_RO_D_P_Imu_Cond_Evit,dados_RR_D_P_Imu_Cond_Evit,dados_RS_D_P_Imu_Cond_Evit,dados_SC_D_P_Imu_Cond_Evit,
-                                 dados_SE_D_P_Imu_Cond_Evit,dados_SP_D_P_Imu_Cond_Evit,dados_TO_D_P_Imu_Cond_Evit)
-tryCatch({arrow::write_parquet(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.parquet")},
-         error = function(e) { arrow::write_parquet(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.parquet') })
-tryCatch({write.xlsx(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx")},
-         error = function(e) { write.xlsx(dados_D_P_Imu_Cond_Evit %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx") })
+dados_D_Vias_Aereas_Inf = rbind(dados_AC_D_Vias_Aereas_Inf,dados_AL_D_Vias_Aereas_Inf,dados_AM_D_Vias_Aereas_Inf,dados_AP_D_Vias_Aereas_Inf,
+                            dados_BA_D_Vias_Aereas_Inf,dados_CE_D_Vias_Aereas_Inf,dados_DF_D_Vias_Aereas_Inf,dados_ES_D_Vias_Aereas_Inf,
+                            dados_GO_D_Vias_Aereas_Inf,dados_MA_D_Vias_Aereas_Inf,dados_MG_D_Vias_Aereas_Inf,dados_MS_D_Vias_Aereas_Inf,
+                            dados_MT_D_Vias_Aereas_Inf,dados_PA_D_Vias_Aereas_Inf,dados_PB_D_Vias_Aereas_Inf,dados_PE_D_Vias_Aereas_Inf,
+                            dados_PI_D_Vias_Aereas_Inf,dados_PR_D_Vias_Aereas_Inf,dados_RJ_D_Vias_Aereas_Inf,dados_RN_D_Vias_Aereas_Inf,
+                            dados_RO_D_Vias_Aereas_Inf,dados_RR_D_Vias_Aereas_Inf,dados_RS_D_Vias_Aereas_Inf,dados_SC_D_Vias_Aereas_Inf,
+                            dados_SE_D_Vias_Aereas_Inf,dados_SP_D_Vias_Aereas_Inf,dados_TO_D_Vias_Aereas_Inf)
+tryCatch({arrow::write_parquet(dados_D_Vias_Aereas_Inf %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Vias_Aereas_Inf %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.parquet') })
+tryCatch({write.xlsx(dados_D_Vias_Aereas_Inf %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Vias_Aereas_Inf %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.xlsx") })
+
+####=====================
+#### Doenças imunizáveis
+####=====================
+dados_AC_D_Imunizaveis = FiltraDadosCID(dados_AC, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_AL_D_Imunizaveis = FiltraDadosCID(dados_AL, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_AM_D_Imunizaveis = FiltraDadosCID(dados_AM, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_AP_D_Imunizaveis = FiltraDadosCID(dados_AP, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_BA_D_Imunizaveis = FiltraDadosCID(dados_BA, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_CE_D_Imunizaveis = FiltraDadosCID(dados_CE, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_DF_D_Imunizaveis = FiltraDadosCID(dados_DF, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_ES_D_Imunizaveis = FiltraDadosCID(dados_ES, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_GO_D_Imunizaveis = FiltraDadosCID(dados_GO, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_MA_D_Imunizaveis = FiltraDadosCID(dados_MA, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_MG_D_Imunizaveis = FiltraDadosCID(dados_MG, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_MS_D_Imunizaveis = FiltraDadosCID(dados_MS, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_MT_D_Imunizaveis = FiltraDadosCID(dados_MT, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_PA_D_Imunizaveis = FiltraDadosCID(dados_PA, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_PB_D_Imunizaveis = FiltraDadosCID(dados_PB, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_PE_D_Imunizaveis = FiltraDadosCID(dados_PE, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_PI_D_Imunizaveis = FiltraDadosCID(dados_PI, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_PR_D_Imunizaveis = FiltraDadosCID(dados_PR, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_RJ_D_Imunizaveis = FiltraDadosCID(dados_RJ, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_RN_D_Imunizaveis = FiltraDadosCID(dados_RN, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_RO_D_Imunizaveis = FiltraDadosCID(dados_RO, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_RR_D_Imunizaveis = FiltraDadosCID(dados_RR, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_RS_D_Imunizaveis = FiltraDadosCID(dados_RS, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_SC_D_Imunizaveis = FiltraDadosCID(dados_SC, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_SE_D_Imunizaveis = FiltraDadosCID(dados_SE, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_SP_D_Imunizaveis = FiltraDadosCID(dados_SP, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+dados_TO_D_Imunizaveis = FiltraDadosCID(dados_TO, c("A37", "A36", "B16", "G00", "A17", "B26", "B06", "B05", "A33", "A34", "A35", "A19"))
+estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
+for (uf in estados) {
+  tryCatch({arrow::write_parquet(
+    get(paste0("dados_", uf, "_D_Imunizaveis")) %>% as.data.frame(),
+    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_", uf, "_D_Imunizaveis.parquet"))},
+    error = function(e) { arrow::write_parquet(
+      get(paste0("dados_", uf, "_D_Imunizaveis")) %>% as.data.frame(),
+      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_", uf, "_D_Imunizaveis.parquet")) })
+}
+dados_D_Imunizaveis = rbind(dados_AC_D_Imunizaveis,dados_AL_D_Imunizaveis,dados_AM_D_Imunizaveis,dados_AP_D_Imunizaveis,
+                                 dados_BA_D_Imunizaveis,dados_CE_D_Imunizaveis,dados_DF_D_Imunizaveis,dados_ES_D_Imunizaveis,
+                                 dados_GO_D_Imunizaveis,dados_MA_D_Imunizaveis,dados_MG_D_Imunizaveis,dados_MS_D_Imunizaveis,
+                                 dados_MT_D_Imunizaveis,dados_PA_D_Imunizaveis,dados_PB_D_Imunizaveis,dados_PE_D_Imunizaveis,
+                                 dados_PI_D_Imunizaveis,dados_PR_D_Imunizaveis,dados_RJ_D_Imunizaveis,dados_RN_D_Imunizaveis,
+                                 dados_RO_D_Imunizaveis,dados_RR_D_Imunizaveis,dados_RS_D_Imunizaveis,dados_SC_D_Imunizaveis,
+                                 dados_SE_D_Imunizaveis,dados_SP_D_Imunizaveis,dados_TO_D_Imunizaveis)
+tryCatch({arrow::write_parquet(dados_D_Imunizaveis %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.parquet")},
+         error = function(e) { arrow::write_parquet(dados_D_Imunizaveis %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.parquet') })
+tryCatch({write.xlsx(dados_D_Imunizaveis %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.xlsx")},
+         error = function(e) { write.xlsx(dados_D_Imunizaveis %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.xlsx") })
 
 ####===========================================
 #### Doenças relacionadas ao Pré-Natal e Parto
 ####===========================================
-dados_AC_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AC, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_AL_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AL, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_AM_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AM, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_AP_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AP, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_BA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_BA, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_CE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_CE, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_DF_D_Rel_PreNat_Parto = FiltraDadosCID(dados_DF, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_ES_D_Rel_PreNat_Parto = FiltraDadosCID(dados_ES, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_GO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_GO, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_MA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MA, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_MG_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MG, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_MS_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MS, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_MT_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MT, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_PA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PA, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_PB_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PB, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_PE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PE, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_PI_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PI, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_PR_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PR, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_RJ_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RJ, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_RN_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RN, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_RO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RO, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_RR_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RR, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_RS_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RS, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_SC_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SC, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_SE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SE, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_SP_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SP, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
-dados_TO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_TO, c("B20","B21","B22","B23","B24","O23","P00","P35","P70"))
+dados_AC_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AC, c("O23", "A50", "P35"))
+dados_AL_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AL, c("O23", "A50", "P35"))
+dados_AM_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AM, c("O23", "A50", "P35"))
+dados_AP_D_Rel_PreNat_Parto = FiltraDadosCID(dados_AP, c("O23", "A50", "P35"))
+dados_BA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_BA, c("O23", "A50", "P35"))
+dados_CE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_CE, c("O23", "A50", "P35"))
+dados_DF_D_Rel_PreNat_Parto = FiltraDadosCID(dados_DF, c("O23", "A50", "P35"))
+dados_ES_D_Rel_PreNat_Parto = FiltraDadosCID(dados_ES, c("O23", "A50", "P35"))
+dados_GO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_GO, c("O23", "A50", "P35"))
+dados_MA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MA, c("O23", "A50", "P35"))
+dados_MG_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MG, c("O23", "A50", "P35"))
+dados_MS_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MS, c("O23", "A50", "P35"))
+dados_MT_D_Rel_PreNat_Parto = FiltraDadosCID(dados_MT, c("O23", "A50", "P35"))
+dados_PA_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PA, c("O23", "A50", "P35"))
+dados_PB_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PB, c("O23", "A50", "P35"))
+dados_PE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PE, c("O23", "A50", "P35"))
+dados_PI_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PI, c("O23", "A50", "P35"))
+dados_PR_D_Rel_PreNat_Parto = FiltraDadosCID(dados_PR, c("O23", "A50", "P35"))
+dados_RJ_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RJ, c("O23", "A50", "P35"))
+dados_RN_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RN, c("O23", "A50", "P35"))
+dados_RO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RO, c("O23", "A50", "P35"))
+dados_RR_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RR, c("O23", "A50", "P35"))
+dados_RS_D_Rel_PreNat_Parto = FiltraDadosCID(dados_RS, c("O23", "A50", "P35"))
+dados_SC_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SC, c("O23", "A50", "P35"))
+dados_SE_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SE, c("O23", "A50", "P35"))
+dados_SP_D_Rel_PreNat_Parto = FiltraDadosCID(dados_SP, c("O23", "A50", "P35"))
+dados_TO_D_Rel_PreNat_Parto = FiltraDadosCID(dados_TO, c("O23", "A50", "P35"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -834,33 +885,33 @@ tryCatch({write.xlsx(dados_Hipertensao %>% as.data.frame(), "C:/Users/cesar_maci
 ####======================================
 #### Infecção da pele e tecido subcutâneo
 ####======================================
-dados_AC_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AC, c("A46","L01","L02","L03","L04","L08"))
-dados_AL_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AL, c("A46","L01","L02","L03","L04","L08"))
-dados_AM_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AM, c("A46","L01","L02","L03","L04","L08"))
-dados_AP_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AP, c("A46","L01","L02","L03","L04","L08"))
-dados_BA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_BA, c("A46","L01","L02","L03","L04","L08"))
-dados_CE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_CE, c("A46","L01","L02","L03","L04","L08"))
-dados_DF_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_DF, c("A46","L01","L02","L03","L04","L08"))
-dados_ES_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_ES, c("A46","L01","L02","L03","L04","L08"))
-dados_GO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_GO, c("A46","L01","L02","L03","L04","L08"))
-dados_MA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MA, c("A46","L01","L02","L03","L04","L08"))
-dados_MG_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MG, c("A46","L01","L02","L03","L04","L08"))
-dados_MS_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MS, c("A46","L01","L02","L03","L04","L08"))
-dados_MT_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MT, c("A46","L01","L02","L03","L04","L08"))
-dados_PA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PA, c("A46","L01","L02","L03","L04","L08"))
-dados_PB_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PB, c("A46","L01","L02","L03","L04","L08"))
-dados_PE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PE, c("A46","L01","L02","L03","L04","L08"))
-dados_PI_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PI, c("A46","L01","L02","L03","L04","L08"))
-dados_PR_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PR, c("A46","L01","L02","L03","L04","L08"))
-dados_RJ_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RJ, c("A46","L01","L02","L03","L04","L08"))
-dados_RN_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RN, c("A46","L01","L02","L03","L04","L08"))
-dados_RO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RO, c("A46","L01","L02","L03","L04","L08"))
-dados_RR_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RR, c("A46","L01","L02","L03","L04","L08"))
-dados_RS_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RS, c("A46","L01","L02","L03","L04","L08"))
-dados_SC_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SC, c("A46","L01","L02","L03","L04","L08"))
-dados_SE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SE, c("A46","L01","L02","L03","L04","L08"))
-dados_SP_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SP, c("A46","L01","L02","L03","L04","L08"))
-dados_TO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_TO, c("A46","L01","L02","L03","L04","L08"))
+dados_AC_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AC, c("L01","L02","L03","L04"))
+dados_AL_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AL, c("L01","L02","L03","L04"))
+dados_AM_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AM, c("L01","L02","L03","L04"))
+dados_AP_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_AP, c("L01","L02","L03","L04"))
+dados_BA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_BA, c("L01","L02","L03","L04"))
+dados_CE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_CE, c("L01","L02","L03","L04"))
+dados_DF_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_DF, c("L01","L02","L03","L04"))
+dados_ES_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_ES, c("L01","L02","L03","L04"))
+dados_GO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_GO, c("L01","L02","L03","L04"))
+dados_MA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MA, c("L01","L02","L03","L04"))
+dados_MG_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MG, c("L01","L02","L03","L04"))
+dados_MS_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MS, c("L01","L02","L03","L04"))
+dados_MT_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_MT, c("L01","L02","L03","L04"))
+dados_PA_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PA, c("L01","L02","L03","L04"))
+dados_PB_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PB, c("L01","L02","L03","L04"))
+dados_PE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PE, c("L01","L02","L03","L04"))
+dados_PI_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PI, c("L01","L02","L03","L04"))
+dados_PR_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_PR, c("L01","L02","L03","L04"))
+dados_RJ_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RJ, c("L01","L02","L03","L04"))
+dados_RN_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RN, c("L01","L02","L03","L04"))
+dados_RO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RO, c("L01","L02","L03","L04"))
+dados_RR_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RR, c("L01","L02","L03","L04"))
+dados_RS_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_RS, c("L01","L02","L03","L04"))
+dados_SC_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SC, c("L01","L02","L03","L04"))
+dados_SE_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SE, c("L01","L02","L03","L04"))
+dados_SP_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_SP, c("L01","L02","L03","L04"))
+dados_TO_Inf_Pele_Tec_Sub = FiltraDadosCID(dados_TO, c("L01","L02","L03","L04"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -885,33 +936,33 @@ tryCatch({write.xlsx(dados_Inf_Pele_Tec_Sub %>% as.data.frame(), "C:/Users/cesar
 ####=====================================
 #### Infecção no Rim e no Trato Urinário
 ####=====================================
-dados_AC_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AC, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_AL_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AL, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_AM_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AM, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_AP_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AP, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_BA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_BA, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_CE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_CE, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_DF_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_DF, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_ES_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_ES, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_GO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_GO, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_MA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MA, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_MG_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MG, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_MS_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MS, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_MT_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MT, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_PA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PA, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_PB_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PB, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_PE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PE, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_PI_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PI, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_PR_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PR, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_RJ_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RJ, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_RN_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RN, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_RO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RO, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_RR_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RR, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_RS_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RS, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_SC_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SC, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_SE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SE, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_SP_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SP, c("N00","N10","N11","N12","N15","N30","N34","N39"))
-dados_TO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_TO, c("N00","N10","N11","N12","N15","N30","N34","N39"))
+dados_AC_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AC, c("N10","N11","N12","N39"))
+dados_AL_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AL, c("N10","N11","N12","N39"))
+dados_AM_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AM, c("N10","N11","N12","N39"))
+dados_AP_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_AP, c("N10","N11","N12","N39"))
+dados_BA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_BA, c("N10","N11","N12","N39"))
+dados_CE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_CE, c("N10","N11","N12","N39"))
+dados_DF_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_DF, c("N10","N11","N12","N39"))
+dados_ES_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_ES, c("N10","N11","N12","N39"))
+dados_GO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_GO, c("N10","N11","N12","N39"))
+dados_MA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MA, c("N10","N11","N12","N39"))
+dados_MG_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MG, c("N10","N11","N12","N39"))
+dados_MS_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MS, c("N10","N11","N12","N39"))
+dados_MT_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_MT, c("N10","N11","N12","N39"))
+dados_PA_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PA, c("N10","N11","N12","N39"))
+dados_PB_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PB, c("N10","N11","N12","N39"))
+dados_PE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PE, c("N10","N11","N12","N39"))
+dados_PI_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PI, c("N10","N11","N12","N39"))
+dados_PR_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_PR, c("N10","N11","N12","N39"))
+dados_RJ_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RJ, c("N10","N11","N12","N39"))
+dados_RN_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RN, c("N10","N11","N12","N39"))
+dados_RO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RO, c("N10","N11","N12","N39"))
+dados_RR_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RR, c("N10","N11","N12","N39"))
+dados_RS_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_RS, c("N10","N11","N12","N39"))
+dados_SC_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SC, c("N10","N11","N12","N39"))
+dados_SE_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SE, c("N10","N11","N12","N39"))
+dados_SP_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_SP, c("N10","N11","N12","N39"))
+dados_TO_Inf_Rim_Tr_Urin = FiltraDadosCID(dados_TO, c("N10","N11","N12","N39"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -936,33 +987,33 @@ tryCatch({write.xlsx(dados_Inf_Rim_Tr_Urin %>% as.data.frame(), "C:/Users/cesar_
 ####=======================================
 #### Infecções de ouvido, nariz e garganta
 ####=======================================
-dados_AC_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AC, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_AL_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AL, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_AM_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AM, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_AP_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AP, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_BA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_BA, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_CE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_CE, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_DF_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_DF, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_ES_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_ES, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_GO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_GO, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_MA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MA, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_MG_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MG, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_MS_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MS, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_MT_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MT, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_PA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PA, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_PB_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PB, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_PE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PE, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_PI_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PI, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_PR_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PR, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_RJ_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RJ, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_RN_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RN, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_RO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RO, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_RR_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RR, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_RS_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RS, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_SC_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SC, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_SE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SE, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_SP_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SP, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
-dados_TO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_TO, c("H66","I00","I01","I02","J00","J01","J02","J03","J06","J31"))
+dados_AC_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AC, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_AL_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AL, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_AM_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AM, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_AP_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_AP, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_BA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_BA, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_CE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_CE, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_DF_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_DF, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_ES_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_ES, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_GO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_GO, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_MA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MA, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_MG_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MG, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_MS_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MS, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_MT_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_MT, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_PA_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PA, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_PB_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PB, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_PE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PE, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_PI_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PI, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_PR_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_PR, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_RJ_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RJ, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_RN_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RN, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_RO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RO, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_RR_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RR, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_RS_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_RS, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_SC_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SC, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_SE_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SE, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_SP_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_SP, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
+dados_TO_Inf_Ouv_Nariz_Garg = FiltraDadosCID(dados_TO, c("J03", "J02", "J06", "J00", "H66", "J31", "J01"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -1035,87 +1086,36 @@ tryCatch({arrow::write_parquet(dados_Insuf_Card %>% as.data.frame(), "C:/Users/c
 tryCatch({write.xlsx(dados_Insuf_Card %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx")},
          error = function(e) { write.xlsx(dados_Insuf_Card %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx") })
 
-####============================
-#### Neoplasia maligna do útero
-####============================
-dados_AC_Neo_Maligna_Utero = FiltraDadosCID(dados_AC, c("C53","C54","C55"))
-dados_AL_Neo_Maligna_Utero = FiltraDadosCID(dados_AL, c("C53","C54","C55"))
-dados_AM_Neo_Maligna_Utero = FiltraDadosCID(dados_AM, c("C53","C54","C55"))
-dados_AP_Neo_Maligna_Utero = FiltraDadosCID(dados_AP, c("C53","C54","C55"))
-dados_BA_Neo_Maligna_Utero = FiltraDadosCID(dados_BA, c("C53","C54","C55"))
-dados_CE_Neo_Maligna_Utero = FiltraDadosCID(dados_CE, c("C53","C54","C55"))
-dados_DF_Neo_Maligna_Utero = FiltraDadosCID(dados_DF, c("C53","C54","C55"))
-dados_ES_Neo_Maligna_Utero = FiltraDadosCID(dados_ES, c("C53","C54","C55"))
-dados_GO_Neo_Maligna_Utero = FiltraDadosCID(dados_GO, c("C53","C54","C55"))
-dados_MA_Neo_Maligna_Utero = FiltraDadosCID(dados_MA, c("C53","C54","C55"))
-dados_MG_Neo_Maligna_Utero = FiltraDadosCID(dados_MG, c("C53","C54","C55"))
-dados_MS_Neo_Maligna_Utero = FiltraDadosCID(dados_MS, c("C53","C54","C55"))
-dados_MT_Neo_Maligna_Utero = FiltraDadosCID(dados_MT, c("C53","C54","C55"))
-dados_PA_Neo_Maligna_Utero = FiltraDadosCID(dados_PA, c("C53","C54","C55"))
-dados_PB_Neo_Maligna_Utero = FiltraDadosCID(dados_PB, c("C53","C54","C55"))
-dados_PE_Neo_Maligna_Utero = FiltraDadosCID(dados_PE, c("C53","C54","C55"))
-dados_PI_Neo_Maligna_Utero = FiltraDadosCID(dados_PI, c("C53","C54","C55"))
-dados_PR_Neo_Maligna_Utero = FiltraDadosCID(dados_PR, c("C53","C54","C55"))
-dados_RJ_Neo_Maligna_Utero = FiltraDadosCID(dados_RJ, c("C53","C54","C55"))
-dados_RN_Neo_Maligna_Utero = FiltraDadosCID(dados_RN, c("C53","C54","C55"))
-dados_RO_Neo_Maligna_Utero = FiltraDadosCID(dados_RO, c("C53","C54","C55"))
-dados_RR_Neo_Maligna_Utero = FiltraDadosCID(dados_RR, c("C53","C54","C55"))
-dados_RS_Neo_Maligna_Utero = FiltraDadosCID(dados_RS, c("C53","C54","C55"))
-dados_SC_Neo_Maligna_Utero = FiltraDadosCID(dados_SC, c("C53","C54","C55"))
-dados_SE_Neo_Maligna_Utero = FiltraDadosCID(dados_SE, c("C53","C54","C55"))
-dados_SP_Neo_Maligna_Utero = FiltraDadosCID(dados_SP, c("C53","C54","C55"))
-dados_TO_Neo_Maligna_Utero = FiltraDadosCID(dados_TO, c("C53","C54","C55"))
-estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
-for (uf in estados) {
-  tryCatch({arrow::write_parquet(
-    get(paste0("dados_", uf, "_Neo_Maligna_Utero")) %>% as.data.frame(),
-    paste0("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_", uf, "_Neo_Maligna_Utero.parquet"))},
-    error = function(e) { arrow::write_parquet(
-      get(paste0("dados_", uf, "_Neo_Maligna_Utero")) %>% as.data.frame(),
-      paste0("D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_", uf, "_Neo_Maligna_Utero.parquet")) })
-}
-dados_Neo_Maligna_Utero = rbind(dados_AC_Neo_Maligna_Utero,dados_AL_Neo_Maligna_Utero,dados_AM_Neo_Maligna_Utero,dados_AP_Neo_Maligna_Utero,
-                                dados_BA_Neo_Maligna_Utero,dados_CE_Neo_Maligna_Utero,dados_DF_Neo_Maligna_Utero,dados_ES_Neo_Maligna_Utero,
-                                dados_GO_Neo_Maligna_Utero,dados_MA_Neo_Maligna_Utero,dados_MG_Neo_Maligna_Utero,dados_MS_Neo_Maligna_Utero,
-                                dados_MT_Neo_Maligna_Utero,dados_PA_Neo_Maligna_Utero,dados_PB_Neo_Maligna_Utero,dados_PE_Neo_Maligna_Utero,
-                                dados_PI_Neo_Maligna_Utero,dados_PR_Neo_Maligna_Utero,dados_RJ_Neo_Maligna_Utero,dados_RN_Neo_Maligna_Utero,
-                                dados_RO_Neo_Maligna_Utero,dados_RR_Neo_Maligna_Utero,dados_RS_Neo_Maligna_Utero,dados_SC_Neo_Maligna_Utero,
-                                dados_SE_Neo_Maligna_Utero,dados_SP_Neo_Maligna_Utero,dados_TO_Neo_Maligna_Utero)
-tryCatch({arrow::write_parquet(dados_Neo_Maligna_Utero %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.parquet")},
-         error = function(e) { arrow::write_parquet(dados_Neo_Maligna_Utero %>% as.data.frame(), 'D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.parquet') })
-tryCatch({write.xlsx(dados_Neo_Maligna_Utero %>% as.data.frame(), "C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx")},
-         error = function(e) { write.xlsx(dados_Neo_Maligna_Utero %>% as.data.frame(), "D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx") })
-
 ####============
 #### Pneumonias
 ####============
-dados_AC_Pneumonias = FiltraDadosCID(dados_AC, c("J13","J14","J15","J17","J18"))
-dados_AL_Pneumonias = FiltraDadosCID(dados_AL, c("J13","J14","J15","J17","J18"))
-dados_AM_Pneumonias = FiltraDadosCID(dados_AM, c("J13","J14","J15","J17","J18"))
-dados_AP_Pneumonias = FiltraDadosCID(dados_AP, c("J13","J14","J15","J17","J18"))
-dados_BA_Pneumonias = FiltraDadosCID(dados_BA, c("J13","J14","J15","J17","J18"))
-dados_CE_Pneumonias = FiltraDadosCID(dados_CE, c("J13","J14","J15","J17","J18"))
-dados_DF_Pneumonias = FiltraDadosCID(dados_DF, c("J13","J14","J15","J17","J18"))
-dados_ES_Pneumonias = FiltraDadosCID(dados_ES, c("J13","J14","J15","J17","J18"))
-dados_GO_Pneumonias = FiltraDadosCID(dados_GO, c("J13","J14","J15","J17","J18"))
-dados_MA_Pneumonias = FiltraDadosCID(dados_MA, c("J13","J14","J15","J17","J18"))
-dados_MG_Pneumonias = FiltraDadosCID(dados_MG, c("J13","J14","J15","J17","J18"))
-dados_MS_Pneumonias = FiltraDadosCID(dados_MS, c("J13","J14","J15","J17","J18"))
-dados_MT_Pneumonias = FiltraDadosCID(dados_MT, c("J13","J14","J15","J17","J18"))
-dados_PA_Pneumonias = FiltraDadosCID(dados_PA, c("J13","J14","J15","J17","J18"))
-dados_PB_Pneumonias = FiltraDadosCID(dados_PB, c("J13","J14","J15","J17","J18"))
-dados_PE_Pneumonias = FiltraDadosCID(dados_PE, c("J13","J14","J15","J17","J18"))
-dados_PI_Pneumonias = FiltraDadosCID(dados_PI, c("J13","J14","J15","J17","J18"))
-dados_PR_Pneumonias = FiltraDadosCID(dados_PR, c("J13","J14","J15","J17","J18"))
-dados_RJ_Pneumonias = FiltraDadosCID(dados_RJ, c("J13","J14","J15","J17","J18"))
-dados_RN_Pneumonias = FiltraDadosCID(dados_RN, c("J13","J14","J15","J17","J18"))
-dados_RO_Pneumonias = FiltraDadosCID(dados_RO, c("J13","J14","J15","J17","J18"))
-dados_RR_Pneumonias = FiltraDadosCID(dados_RR, c("J13","J14","J15","J17","J18"))
-dados_RS_Pneumonias = FiltraDadosCID(dados_RS, c("J13","J14","J15","J17","J18"))
-dados_SC_Pneumonias = FiltraDadosCID(dados_SC, c("J13","J14","J15","J17","J18"))
-dados_SE_Pneumonias = FiltraDadosCID(dados_SE, c("J13","J14","J15","J17","J18"))
-dados_SP_Pneumonias = FiltraDadosCID(dados_SP, c("J13","J14","J15","J17","J18"))
-dados_TO_Pneumonias = FiltraDadosCID(dados_TO, c("J13","J14","J15","J17","J18"))
+dados_AC_Pneumonias = FiltraDadosCID(dados_AC, c("J15", "J18", "J14", "J13"))
+dados_AL_Pneumonias = FiltraDadosCID(dados_AL, c("J15", "J18", "J14", "J13"))
+dados_AM_Pneumonias = FiltraDadosCID(dados_AM, c("J15", "J18", "J14", "J13"))
+dados_AP_Pneumonias = FiltraDadosCID(dados_AP, c("J15", "J18", "J14", "J13"))
+dados_BA_Pneumonias = FiltraDadosCID(dados_BA, c("J15", "J18", "J14", "J13"))
+dados_CE_Pneumonias = FiltraDadosCID(dados_CE, c("J15", "J18", "J14", "J13"))
+dados_DF_Pneumonias = FiltraDadosCID(dados_DF, c("J15", "J18", "J14", "J13"))
+dados_ES_Pneumonias = FiltraDadosCID(dados_ES, c("J15", "J18", "J14", "J13"))
+dados_GO_Pneumonias = FiltraDadosCID(dados_GO, c("J15", "J18", "J14", "J13"))
+dados_MA_Pneumonias = FiltraDadosCID(dados_MA, c("J15", "J18", "J14", "J13"))
+dados_MG_Pneumonias = FiltraDadosCID(dados_MG, c("J15", "J18", "J14", "J13"))
+dados_MS_Pneumonias = FiltraDadosCID(dados_MS, c("J15", "J18", "J14", "J13"))
+dados_MT_Pneumonias = FiltraDadosCID(dados_MT, c("J15", "J18", "J14", "J13"))
+dados_PA_Pneumonias = FiltraDadosCID(dados_PA, c("J15", "J18", "J14", "J13"))
+dados_PB_Pneumonias = FiltraDadosCID(dados_PB, c("J15", "J18", "J14", "J13"))
+dados_PE_Pneumonias = FiltraDadosCID(dados_PE, c("J15", "J18", "J14", "J13"))
+dados_PI_Pneumonias = FiltraDadosCID(dados_PI, c("J15", "J18", "J14", "J13"))
+dados_PR_Pneumonias = FiltraDadosCID(dados_PR, c("J15", "J18", "J14", "J13"))
+dados_RJ_Pneumonias = FiltraDadosCID(dados_RJ, c("J15", "J18", "J14", "J13"))
+dados_RN_Pneumonias = FiltraDadosCID(dados_RN, c("J15", "J18", "J14", "J13"))
+dados_RO_Pneumonias = FiltraDadosCID(dados_RO, c("J15", "J18", "J14", "J13"))
+dados_RR_Pneumonias = FiltraDadosCID(dados_RR, c("J15", "J18", "J14", "J13"))
+dados_RS_Pneumonias = FiltraDadosCID(dados_RS, c("J15", "J18", "J14", "J13"))
+dados_SC_Pneumonias = FiltraDadosCID(dados_SC, c("J15", "J18", "J14", "J13"))
+dados_SE_Pneumonias = FiltraDadosCID(dados_SE, c("J15", "J18", "J14", "J13"))
+dados_SP_Pneumonias = FiltraDadosCID(dados_SP, c("J15", "J18", "J14", "J13"))
+dados_TO_Pneumonias = FiltraDadosCID(dados_TO, c("J15", "J18", "J14", "J13"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -1140,33 +1140,33 @@ tryCatch({write.xlsx(dados_Pneumonias %>% as.data.frame(), "C:/Users/cesar_macie
 ####========================================================
 #### Úlcera gastrointestinal com hemorragia e/ou perfuração
 ####========================================================
-dados_AC_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AC, c("K25","K26","K27","K28"))
-dados_AL_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AL, c("K25","K26","K27","K28"))
-dados_AM_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AM, c("K25","K26","K27","K28"))
-dados_AP_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AP, c("K25","K26","K27","K28"))
-dados_BA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_BA, c("K25","K26","K27","K28"))
-dados_CE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_CE, c("K25","K26","K27","K28"))
-dados_DF_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_DF, c("K25","K26","K27","K28"))
-dados_ES_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_ES, c("K25","K26","K27","K28"))
-dados_GO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_GO, c("K25","K26","K27","K28"))
-dados_MA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MA, c("K25","K26","K27","K28"))
-dados_MG_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MG, c("K25","K26","K27","K28"))
-dados_MS_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MS, c("K25","K26","K27","K28"))
-dados_MT_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MT, c("K25","K26","K27","K28"))
-dados_PA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PA, c("K25","K26","K27","K28"))
-dados_PB_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PB, c("K25","K26","K27","K28"))
-dados_PE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PE, c("K25","K26","K27","K28"))
-dados_PI_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PI, c("K25","K26","K27","K28"))
-dados_PR_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PR, c("K25","K26","K27","K28"))
-dados_RJ_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RJ, c("K25","K26","K27","K28"))
-dados_RN_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RN, c("K25","K26","K27","K28"))
-dados_RO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RO, c("K25","K26","K27","K28"))
-dados_RR_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RR, c("K25","K26","K27","K28"))
-dados_RS_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RS, c("K25","K26","K27","K28"))
-dados_SC_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SC, c("K25","K26","K27","K28"))
-dados_SE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SE, c("K25","K26","K27","K28"))
-dados_SP_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SP, c("K25","K26","K27","K28"))
-dados_TO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_TO, c("K25","K26","K27","K28"))
+dados_AC_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AC, c("K25","K26","K27","K28","K92"))
+dados_AL_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AL, c("K25","K26","K27","K28","K92"))
+dados_AM_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AM, c("K25","K26","K27","K28","K92"))
+dados_AP_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_AP, c("K25","K26","K27","K28","K92"))
+dados_BA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_BA, c("K25","K26","K27","K28","K92"))
+dados_CE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_CE, c("K25","K26","K27","K28","K92"))
+dados_DF_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_DF, c("K25","K26","K27","K28","K92"))
+dados_ES_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_ES, c("K25","K26","K27","K28","K92"))
+dados_GO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_GO, c("K25","K26","K27","K28","K92"))
+dados_MA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MA, c("K25","K26","K27","K28","K92"))
+dados_MG_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MG, c("K25","K26","K27","K28","K92"))
+dados_MS_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MS, c("K25","K26","K27","K28","K92"))
+dados_MT_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_MT, c("K25","K26","K27","K28","K92"))
+dados_PA_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PA, c("K25","K26","K27","K28","K92"))
+dados_PB_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PB, c("K25","K26","K27","K28","K92"))
+dados_PE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PE, c("K25","K26","K27","K28","K92"))
+dados_PI_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PI, c("K25","K26","K27","K28","K92"))
+dados_PR_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_PR, c("K25","K26","K27","K28","K92"))
+dados_RJ_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RJ, c("K25","K26","K27","K28","K92"))
+dados_RN_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RN, c("K25","K26","K27","K28","K92"))
+dados_RO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RO, c("K25","K26","K27","K28","K92"))
+dados_RR_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RR, c("K25","K26","K27","K28","K92"))
+dados_RS_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_RS, c("K25","K26","K27","K28","K92"))
+dados_SC_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SC, c("K25","K26","K27","K28","K92"))
+dados_SE_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SE, c("K25","K26","K27","K28","K92"))
+dados_SP_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_SP, c("K25","K26","K27","K28","K92"))
+dados_TO_Ulc_Gastro_Hem_Perf = FiltraDadosCID(dados_TO, c("K25","K26","K27","K28","K92"))
 estados = c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO")
 for (uf in estados) {
   tryCatch({arrow::write_parquet(
@@ -1197,18 +1197,20 @@ dados_Angina = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nes
                         error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Angina/dados_Angina.xlsx") })
 dados_Asma = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx")},
                       error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Asma/dados_Asma.xlsx") })
+dados_Condicoes_Evitaveis = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.xlsx")},
+                                     error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Condições evitáveis/dados_Condicoes_Evitaveis.xlsx") })
 dados_Def_nut = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.xlsx")},
                          error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Deficiências nutricionais/dados_Def_nut.xlsx") })
 dados_Diabetes = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.xlsx")},
                           error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Diabetes/dados_Diabetes.xlsx") })
 dados_D_Inf_Org_Pelv_Fem = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx")},
                                     error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Inflamatória órgãos pélvicos femininos/dados_D_Inf_Org_Pelv_Fem.xlsx") })
-dados_D_Pulm_Obs_Cron = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx")},
-                                 error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doença Pulmonar obstrutiva crônica/dados_D_Pulm_Obs_Cron.xlsx") })
 dados_D_Cerebrovasc = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx")},
                                error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças Cerebro-vasculares/dados_D_Cerebrovasc.xlsx") })
-dados_D_P_Imu_Cond_Evit = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx")},
-                                   error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças preveníveis por imunização e condições evitáveis/dados_D_P_Imu_Cond_Evit.xlsx") })
+dados_D_Vias_Aereas_Inf = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.xlsx")},
+                                error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças das vias aéreas inferiores/dados_D_Vias_Aereas_Inf.xlsx") })
+dados_D_Imunizaveis = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.xlsx")},
+                               error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças imunizáveis/dados_D_Imunizaveis.xlsx") })
 dados_D_Rel_PreNat_Parto = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx")},
                                     error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Doenças relacionadas ao Pré-Natal e Parto/dados_D_Rel_PreNat_Parto.xlsx") })
 dados_Epilepsias = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Epilepsias/dados_Epilepsias.xlsx")},
@@ -1225,8 +1227,6 @@ dados_Inf_Ouv_Nariz_Garg = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/
                                     error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Infecções de ouvido, nariz e garganta/dados_Inf_Ouv_Nariz_Garg.xlsx") })
 dados_Insuf_Card = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx")},
                             error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Insuficiência Cardíaca/dados_Insuf_Card.xlsx") })
-dados_Neo_Maligna_Utero = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx")},
-                                   error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Neoplasia maligna do útero/dados_Neo_Maligna_Utero.xlsx") })
 dados_Pneumonias = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx")},
                             error = function(e) {read.xlsx("D:/NESCON/internacoes-sih-sus/Dados por CID/Pneumonias/dados_Pneumonias.xlsx") })
 dados_Ulc_Gastro_Hem_Perf = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop/Usiminas/Nescon/internacoes-sih-sus/Dados por CID/Úlcera gastrointestinal com hemorragia eou perfuração/dados_Ulc_Gastro_Hem_Perf.xlsx")},
@@ -1236,14 +1236,15 @@ dados_Ulc_Gastro_Hem_Perf = tryCatch({read.xlsx("C:/Users/cesar_macieira/Desktop
 #### Junção dos dados
 ####==================
 dados_icsap = rbind(dados_Anemia %>% mutate(CID_ICSAP = 'Anemia'),
-                    dados_Asma %>% mutate(CID_ICSAP = 'Asma'),
                     dados_Angina %>% mutate(CID_ICSAP = 'Angina'),
+                    dados_Asma %>% mutate(CID_ICSAP = 'Asma'),
+                    dados_Condicoes_Evitaveis %>% mutate(CID_ICSAP = 'Condições evitáveis'),
                     dados_Def_nut %>% mutate(CID_ICSAP = 'Deficiências nutricionais'),
                     dados_Diabetes %>% mutate(CID_ICSAP = 'Diabetes'),
                     dados_D_Inf_Org_Pelv_Fem %>% mutate(CID_ICSAP = 'Doença Inflamatória órgãos pélvicos femininos'),
-                    dados_D_Pulm_Obs_Cron %>% mutate(CID_ICSAP = 'Doença Pulmonar obstrutiva crônica'),
                     dados_D_Cerebrovasc %>% mutate(CID_ICSAP = 'Doenças Cerebro-vasculares'),
-                    dados_D_P_Imu_Cond_Evit %>% mutate(CID_ICSAP = 'Doenças preveníveis por imunização e condições evitáveis'),
+                    dados_D_Vias_Aereas_Inf %>% mutate(CID_ICSAP = 'Doenças das vias aéreas inferiores'),
+                    dados_D_Imunizaveis %>% mutate(CID_ICSAP = 'Doenças imunizáveis'),
                     dados_D_Rel_PreNat_Parto %>% mutate(CID_ICSAP = 'Doenças relacionadas ao Pré-Natal e Parto'),
                     dados_Epilepsias %>% mutate(CID_ICSAP = 'Epilepsias'),
                     dados_Gastro_Inf_Comp %>% mutate(CID_ICSAP = 'Gastroenterites Infecciosas e complicações'),
@@ -1252,7 +1253,6 @@ dados_icsap = rbind(dados_Anemia %>% mutate(CID_ICSAP = 'Anemia'),
                     dados_Inf_Rim_Tr_Urin %>% mutate(CID_ICSAP = 'Infecção no Rim e no Trato Urinário'),
                     dados_Inf_Ouv_Nariz_Garg %>% mutate(CID_ICSAP = 'Infecções de ouvido, nariz e garganta'),
                     dados_Insuf_Card %>% mutate(CID_ICSAP = 'Insuficiência Cardíaca'),
-                    dados_Neo_Maligna_Utero %>% mutate(CID_ICSAP = 'Neoplasia maligna do útero'),
                     dados_Pneumonias %>% mutate(CID_ICSAP = 'Pneumonias'),
                     dados_Ulc_Gastro_Hem_Perf %>% mutate(CID_ICSAP = 'Úlcera gastrointestinal com hemorragia eou perfuração'))
 write.xlsx(dados_icsap %>% as.data.frame(),'dados_icsap.xlsx')
