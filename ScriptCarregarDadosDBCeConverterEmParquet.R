@@ -67,7 +67,8 @@ basic.stats = function(x, more = F) {
 DadosDBCemParquet = function(arquivos, caminho_pasta) {
   lista_dfs = list()
   for (arquivo in arquivos) {
-    df = read.dbc(arquivo) %>% select(DT_INTER,MUNIC_RES,SEXO,DIAG_PRINC,COD_IDADE,IDADE) %>% 
+    df = read.dbc(arquivo) %>% filter(IDENT == 1) %>% 
+      select(DT_INTER,MUNIC_RES,SEXO,DIAG_PRINC,COD_IDADE,IDADE) %>% 
       mutate(DT_INTER = as.character(DT_INTER)) %>%
       mutate(ANO = substr(DT_INTER, 1, 4)) %>%
       mutate(MES = substr(DT_INTER, 5, 6)) %>% 
@@ -83,8 +84,9 @@ DadosDBCemParquet = function(arquivos, caminho_pasta) {
   return(df_final)
 }
 df = read.dbc("D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC/RDAC1001.dbc")
+df %>% head
 df %>% select(DT_INTER,MUNIC_RES,SEXO,DIAG_PRINC,COD_IDADE,IDADE) %>% head
-
+DescritivaCat(df$IDENT)
 
 caminho_pasta_AC = "D:/NESCON/Bancos de Dados ICSAP SIH-SUS/internacoes-sih-sus/AC"
 arquivos_AC = list.files(path = caminho_pasta_AC, pattern = "*.dbc", full.names = TRUE)
